@@ -1,0 +1,18 @@
+{
+  "name": "lol-metrics",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "services/lol-metrics-back",
+    "services/lol-metrics-view"
+  ],
+  "scripts": {
+    "dev:back": "yarn workspace lol-metrics-back dev",
+    "dev:view": "yarn workspace lol-metrics-view dev",
+    "dev": "concurrently -n back,front -c blue,green \"yarn dev:back\" \"yarn dev:view\"",
+    "lint": "yarn workspaces run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

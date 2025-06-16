@@ -1,0 +1,12 @@
+[
+  {
+    "id": "ahri",
+    "name": "Ahri",
+    "role": "Mage"
+  },
+  {
+    "id": "yasuo",
+    "name": "Yasuo",
+    "role": "Fighter"
+  }
+]
