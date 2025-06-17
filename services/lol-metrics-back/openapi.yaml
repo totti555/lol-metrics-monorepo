@@ -1,0 +1,46 @@
+openapi: 3.1.0
+info:
+  title: League API
+  version: 1.0.0
+  description: API to retrieve mocked champions
+
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+
+paths:
+  /champions:
+    get:
+      summary: Get list of champions
+      description: Returns all available champions (mocked)
+      responses:
+        "200":
+          description: Success - List of champions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Champion"
+
+components:
+  schemas:
+    Champion:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the champion
+          example: "1"
+        name:
+          type: string
+          description: Name of the champion
+          example: "Ahri"
+        lane:
+          type: string
+          description: Main lane of the champion
+          example: "mid"
+      required:
+        - id
+        - name
+        - role

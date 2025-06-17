@@ -9,5 +9,8 @@ export default tseslint.config(
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "warn",
     },
+  },
+  {
+    ignores: ["src/types/openapi.ts"],
   }
 );
