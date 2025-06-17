@@ -1,0 +1,73 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Champion {
+  id          Int               @id
+  alias       String            @unique
+  name        String
+  description String
+  portrait    String
+  contentId   String
+  lanes       ChampionLane[]
+  classes     ChampionClass[]
+  worlds      ChampionWorld[]
+  customData  Json?
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+}
+
+model Lane {
+  id        Int             @id @default(autoincrement())
+  name      String          @unique
+  iconUrl   String
+  champions ChampionLane[]
+}
+
+model ChampionLane {
+  champion   Champion @relation(fields: [championId], references: [id])
+  championId Int
+  lane       Lane     @relation(fields: [laneId], references: [id])
+  laneId     Int
+
+  @@id([championId, laneId])
+}
+
+model Class {
+  id        Int              @id @default(autoincrement())
+  name      String           @unique
+  iconUrl   String
+  champions ChampionClass[]
+}
+
+model ChampionClass {
+  champion   Champion @relation(fields: [championId], references: [id])
+  championId Int
+  class      Class    @relation(fields: [classId], references: [id])
+  classId    Int
+
+  @@id([championId, classId])
+}
+
+model World {
+  id        Int              @id @default(autoincrement())
+  name      String           @unique
+  iconUrl   String
+  champions ChampionWorld[]
+}
+
+model ChampionWorld {
+  champion   Champion @relation(fields: [championId], references: [id])
+  championId Int
+  world      World    @relation(fields: [worldId], references: [id])
+  worldId    Int
+
+  @@id([championId, worldId])
+}
