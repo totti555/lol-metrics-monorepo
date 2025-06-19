@@ -59,11 +59,29 @@ export interface components {
              */
             name: string;
             /**
-             * @description Main role of the champion
-             * @example mid
+             * @description Technical alias for asset resolution
+             * @example Ahri
              */
-            role: string;
+            alias: string;
+            /**
+             * @description Champion subtitle
+             * @example the Nine-Tailed Fox
+             */
+            description?: string;
+            /**
+             * @description URL to square icon portrait
+             * @example https://cdn.communitydragon.org/latest/lol-game-data/assets/v1/champion-icons/103.png
+             */
+            squarePortrait?: string;
+            /**
+             * @description URL to splash art (centered)
+             * @example https://cdn.communitydragon.org/latest/champion/Ahri/splash-art
+             */
+            clientPortrait?: string;
+            roles?: components["schemas"]["Role"][];
         };
+        /** @enum {string} */
+        Role: "Top" | "Jungle" | "Mid" | "Bottom" | "Support";
     };
     responses: never;
     parameters: never;

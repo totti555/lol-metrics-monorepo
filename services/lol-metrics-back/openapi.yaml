@@ -36,11 +36,50 @@ components:
           type: string
           description: Name of the champion
           example: "Ahri"
-        lane:
+        alias:
           type: string
-          description: Main lane of the champion
-          example: "mid"
+          description: Technical alias for asset resolution
+          example: "Ahri"
+        description:
+          type: string
+          description: Champion subtitle
+          example: "the Nine-Tailed Fox"
+        squarePortrait:
+          type: string
+          description: URL to square icon portrait
+          example: "https://cdn.communitydragon.org/latest/lol-game-data/assets/v1/champion-icons/103.png"
+        clientPortrait:
+          type: string
+          description: URL to splash art (centered)
+          example: "https://cdn.communitydragon.org/latest/champion/Ahri/splash-art"
+        roles:
+          type: array
+          items:
+            $ref:
+              "#/components/schemas/Role"
+              # image:
+              #   type: string
+              #   example: "https://cdn.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/svg/position-mid.svg"
+        # world:
+        #   type: array
+        #   items:
+        #     type: object
+        #     properties:
+        #       name:
+        #         type: string
+        #         example: "Ionia"
+        #       image:
+        #         type: string
+        #         example: "https://cdn.communitydragon.org/latest/world/ionia.svg"
       required:
         - id
         - name
-        - role
+        - alias
+    Role:
+      type: string
+      enum:
+        - Top
+        - Jungle
+        - Mid
+        - Bottom
+        - Support
