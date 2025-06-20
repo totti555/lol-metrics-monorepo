@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    name: Lint, Build & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎️ Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "yarn"
+
+      - name: 📦 Install dependencies
+        run: yarn install
+
+      - name: 🧹 Run linter (back)
+        run: yarn workspace lol-metrics-back lint
+
+      - name: 🧹 Run linter (front)
+        run: yarn workspace lol-metrics-front lint
+
+      - name: 🏗️ Build backend
+        run: yarn workspace lol-metrics-back build
+
+      - name: 🧪 Run backend unit tests
+        run: yarn workspace lol-metrics-back test-unit:back
