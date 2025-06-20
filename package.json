@@ -10,7 +10,8 @@
     "dev:back": "yarn workspace lol-metrics-back dev",
     "dev:view": "yarn workspace lol-metrics-view dev",
     "dev": "concurrently -n back,front -c blue,green \"yarn dev:back\" \"yarn dev:view\"",
-    "lint": "yarn workspaces run lint"
+    "lint": "yarn workspaces run lint",
+    "test-unit:back": "yarn workspace lol-metrics-back test"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"

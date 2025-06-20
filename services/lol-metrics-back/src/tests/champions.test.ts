@@ -1,14 +1,20 @@
 import { getAllChampions } from "@/services/champions.service";
 import axios from "axios";
-import { fetchSkins, findBaseSkinForChampion } from "@/services/skins.service";
-import { CDragonChampionSummary, CDragonSkin } from "@/types/cdragon";
+import { fetchSkins } from "@/services/skins.service";
+import { mockChampions } from "./mocks/champions.mock";
+import { mockSkins } from "./mocks/skins.mock";
 
 jest.mock("axios");
-jest.mock("@/services/skins.service");
+jest.mock("@/services/skins.service", () => {
+  const actual = jest.requireActual("@/services/skins.service");
+  return {
+    ...actual,
+    fetchSkins: jest.fn(),
+  };
+});
 
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 const mockedFetchSkins = fetchSkins as jest.Mock;
-const mockedFindBaseSkinForChampion = findBaseSkinForChampion as jest.Mock;
 
 describe("getAllChampions", () => {
   const OLD_ENV = process.env;
@@ -26,27 +32,8 @@ describe("getAllChampions", () => {
   });
 
   it("should return formatted champions", async () => {
-    const championData: CDragonChampionSummary[] = [
-      {
-        id: 1,
-        name: "Ahri",
-        alias: "Ahri",
-        description: "The Nine-Tailed Fox",
-        squarePortraitPath: "/lol-game-data/assets/v1/champion-icons/103.png",
-        roles: ["Mid"],
-      },
-    ];
-    const skins: CDragonSkin[] = [
-      {
-        id: 1000,
-        isBase: true,
-        contentId: "some-id",
-        loadScreenPath: "/lol-game-data/assets/v1/loadscreen.jpg",
-      },
-    ];
-    mockedAxios.get.mockResolvedValueOnce({ data: championData });
-    mockedFetchSkins.mockResolvedValueOnce(skins);
-    mockedFindBaseSkinForChampion.mockReturnValueOnce(skins[0]);
+    mockedAxios.get.mockResolvedValueOnce({ data: mockChampions });
+    mockedFetchSkins.mockResolvedValueOnce(mockSkins);
 
     const champions = await getAllChampions();
 
@@ -65,32 +52,25 @@ describe("getAllChampions", () => {
         roles: ["Mid"],
         world: [],
       },
+      {
+        id: "2",
+        name: "Akali",
+        alias: "Akali",
+        description: "The Rogue Assassin",
+        squarePortrait:
+          "https://cdn.communitydragon.org/latest/lol-game-data/assets/v1/champion-icons/84.png",
+        clientPortrait: undefined,
+        roles: ["Mid"],
+        world: [],
+      },
     ]);
   });
 
   it("should filter out champions with id === -1", async () => {
     mockedAxios.get.mockResolvedValueOnce({
-      data: [
-        {
-          id: -1,
-          name: "Dummy",
-          alias: "Dummy",
-          description: "",
-          squarePortraitPath: "",
-          roles: [],
-        },
-        {
-          id: 2,
-          name: "Akali",
-          alias: "Akali",
-          description: "The Rogue Assassin",
-          squarePortraitPath: "/lol-game-data/assets/v1/champion-icons/84.png",
-          roles: ["Mid"],
-        },
-      ],
+      data: [{ ...mockChampions[0], id: -1 }, ...mockChampions.slice(1)],
     });
     mockedFetchSkins.mockResolvedValueOnce([]);
-    mockedFindBaseSkinForChampion.mockReturnValueOnce(undefined);
 
     const champions = await getAllChampions();
 
@@ -107,27 +87,6 @@ describe("getAllChampions", () => {
         world: [],
       },
     ]);
-  });
-
-  it("should handle missing base skin", async () => {
-    mockedAxios.get.mockResolvedValueOnce({
-      data: [
-        {
-          id: 3,
-          name: "Annie",
-          alias: "Annie",
-          description: "The Dark Child",
-          squarePortraitPath: "/lol-game-data/assets/v1/champion-icons/1.png",
-          roles: ["Mid"],
-        },
-      ],
-    });
-    mockedFetchSkins.mockResolvedValueOnce([]);
-    mockedFindBaseSkinForChampion.mockReturnValueOnce(undefined);
-
-    const champions = await getAllChampions();
-
-    expect(champions[0].clientPortrait).toBeUndefined();
   });
 
   it("should return empty array if no champions", async () => {
