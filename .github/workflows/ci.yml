@@ -34,4 +34,4 @@ jobs:
         run: yarn workspace lol-metrics-back build
 
       - name: 🧪 Run backend unit tests
-        run: yarn workspace lol-metrics-back test-unit:back
+        run: yarn workspace lol-metrics-back test
