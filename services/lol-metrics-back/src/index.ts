@@ -1,16 +1,15 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import router from "./routes.ts"; // ⚠️ .js si tu es en ESM
+import router from "./routes";
 
 dotenv.config();
 
 const app = express();
 
-// Autorise les requêtes du frontend local (Next.js)
 app.use(
   cors({
-    origin: "http://localhost:3000", // autorise uniquement ton front en dev
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );

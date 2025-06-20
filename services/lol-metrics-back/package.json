@@ -7,7 +7,8 @@
     "dev": "tsx watch src/index.ts",
     "generate:api": "openapi-typescript openapi.yaml --output src/types/openapi.ts",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "dependencies": {
     "axios": "^1.10.0",
