@@ -1,8 +1,9 @@
-import { CDragonChampionSummary, CDragonSkin, Role } from "@/types/cdragon";
+import { CDragonChampionSummary, CDragonSkin } from "@/types/cdragon";
 import { components } from "@/types/openapi";
 import { toCDragonUrl } from "@/utils/cdragon";
 import axios from "axios";
 import { fetchSkins, findBaseSkinForChampion } from "@/services/skins.service";
+import championsSupplementaryData from "@/data/champions.json";
 
 type Champion = components["schemas"]["Champion"];
 
@@ -11,11 +12,15 @@ export const getAllChampions = async (): Promise<Champion[]> => {
 
   const { data } = await axios.get<CDragonChampionSummary[]>(summaryUrl);
   const skins: CDragonSkin[] = await fetchSkins();
+  const supplementaryDatas = championsSupplementaryData;
 
-  const champions = data
+  const champions: Champion[] = data
     .filter((champion) => champion.id !== -1)
     .map((champion) => {
       const baseSkin = findBaseSkinForChampion(champion.id, skins);
+      const champSupplementaryData = supplementaryDatas.find(
+        (extraChampInfos) => extraChampInfos.key === champion.id
+      );
       return {
         id: String(champion.id),
         name: champion.name,
@@ -26,8 +31,9 @@ export const getAllChampions = async (): Promise<Champion[]> => {
           ? toCDragonUrl(baseSkin.loadScreenPath)
           : undefined,
         roles: champion.roles,
-        world: [],
-      };
+        releaseDate: champSupplementaryData?.release ?? undefined,
+        world: champSupplementaryData?.world ?? undefined,
+      } satisfies Champion;
     });
 
   return champions;

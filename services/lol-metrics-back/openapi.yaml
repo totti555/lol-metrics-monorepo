@@ -55,11 +55,19 @@ components:
         roles:
           type: array
           items:
-            $ref:
-              "#/components/schemas/Role"
-              # image:
-              #   type: string
-              #   example: "https://cdn.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/svg/position-mid.svg"
+            $ref: "#/components/schemas/Role"
+        releaseDate:
+          type: string
+          description: Release date oh the champion
+          example: "2025-06-21"
+        world:
+          type: string
+          description: The region or origin the champion belongs to in the League of Legends universe
+          example:
+            "Piltover"
+            # image:
+            #   type: string
+            #   example: "https://cdn.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/svg/position-mid.svg"
         # world:
         #   type: array
         #   items:
@@ -75,6 +83,9 @@ components:
         - id
         - name
         - alias
+        - description
+        - squarePortrait
+        - roles
     Role:
       type: string
       enum:

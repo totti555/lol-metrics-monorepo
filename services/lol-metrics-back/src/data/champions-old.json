@@ -1,0 +1,1957 @@
+[
+  {
+    "name": "Aatrox",
+    "world": "Runeterra",
+    "id": 1,
+    "key": 266,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2013-06-13",
+    "linksWith": [{ "Tryndamere": "Ennemy", "Zoe": "Ennemy" }]
+  },
+  {
+    "name": "Ahri",
+    "world": "Ionia",
+    "id": 2,
+    "key": 103,
+    "damages_type": "AP",
+    "role": ["Mid", "Support"],
+    "type": ["Mage", "Assassin"],
+    "release": "2011-12-14"
+  },
+  {
+    "name": "Akali",
+    "world": "Ionia",
+    "id": 3,
+    "key": 84,
+    "damages_type": "AP",
+    "role": ["Mid", "Top"],
+    "type": ["Assassin"],
+    "release": "2010-05-11",
+    "linksWith": [{ "Kennen": "Friends", "Shen": "Friends" }]
+  },
+  {
+    "name": "Akshan",
+    "world": "Shurima",
+    "id": 4,
+    "key": 166,
+    "damages_type": "AD",
+    "role": ["Mid", "Top", "ADC"],
+    "type": ["Marksman", "Assassin"],
+    "release": "2021-07-22"
+  },
+  {
+    "name": "Alistar",
+    "world": "Runeterra",
+    "id": 5,
+    "key": 12,
+    "damages_type": "AD",
+    "role": ["Support", "Top"],
+    "type": ["Tank", "Support"],
+    "release": "2009-02-21"
+  },
+  {
+    "name": "Amumu",
+    "world": "Shurima",
+    "id": 6,
+    "key": 32,
+    "damages_type": "AP",
+    "role": ["Jungle", "Support"],
+    "type": ["Tank", "Mage"],
+    "release": "2009-06-26"
+  },
+  {
+    "name": "Anivia",
+    "world": "Freljord",
+    "id": 7,
+    "key": 34,
+    "damages_type": "AP",
+    "role": ["Mid", "Support"],
+    "type": ["Mage", "Support"],
+    "release": "2009-07-10",
+    "linksWith": [{ "Ornn": "Brother", "Lissandra": "Ennemy" }]
+  },
+  {
+    "name": "Annie",
+    "world": "Runeterra",
+    "id": 8,
+    "key": 1,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage"],
+    "release": "2009-02-21"
+  },
+  {
+    "name": "Aphelios",
+    "world": "Targon",
+    "id": 9,
+    "key": 523,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2019-12-11",
+    "linksWith": [{ "Diana": "Possible Friends", "Leona": "Possible Ennemy" }]
+  },
+  {
+    "name": "Ashe",
+    "world": "Freljord",
+    "id": 10,
+    "key": 22,
+    "damages_type": "AD",
+    "role": ["ADC", "Support"],
+    "type": ["Marksman", "Support"],
+    "release": "2009-02-21",
+    "linksWith": [
+      {
+        "Tryndamere": "Boyfriend",
+        "Gragas": "Friends",
+        "Sejuani": "Friends\nEnnemy",
+        "Lissandra": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "AurelionSol",
+    "world": "Runeterra",
+    "id": 11,
+    "key": 136,
+    "damages_type": "AP",
+    "role": ["Mid"],
+
+    "type": ["Mage"],
+    "release": "2016-03-24",
+    "linksWith": [{ "Pantheon": "Ennemy" }]
+  },
+  {
+    "name": "Azir",
+    "world": "Shurima",
+    "id": 12,
+    "key": 268,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage", "Marksman"],
+    "release": "2014-09-16",
+    "linksWith": [
+      {
+        "Sivir": "Descendant\nFriends",
+        "Renekton": "Friends",
+        "Xerath": "Friends",
+        "Nasus": "Allie"
+      }
+    ]
+  },
+  {
+    "name": "Bard",
+    "world": "Runeterra",
+    "id": 13,
+    "key": 432,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Support", "Mage"],
+    "release": "2015-03-12"
+  },
+  {
+    "name": "Belveth",
+    "world": "Void",
+    "id": 14,
+    "key": 200,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Fighter"],
+    "release": "2022-06-09"
+  },
+  {
+    "name": "Blitzcrank",
+    "world": "Zaun",
+    "id": 15,
+    "key": 53,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Tank", "Fighter"],
+    "release": "2009-09-02",
+    "linksWith": [{ "Viktor": "Father", "Oriana": "Allie" }]
+  },
+  {
+    "name": "Brand",
+    "world": "Runeterra",
+    "id": 16,
+    "key": 63,
+    "damages_type": "AP",
+    "role": ["Mid", "Support"],
+    "type": ["Mage"],
+    "release": "2011-04-12",
+    "linksWith": [{ "Ryze": "Ennemy\nMentor" }]
+  },
+  {
+    "name": "Braum",
+    "world": "Freljord",
+    "id": 17,
+    "key": 201,
+    "damages_type": "AD",
+    "role": ["Support"],
+    "type": ["Support", "Tank"],
+    "release": "2014-05-12",
+    "linksWith": [{ "Yuumi": "Friends" }]
+  },
+  {
+    "name": "Caitlyn",
+    "world": "Piltover",
+    "id": 18,
+    "key": 51,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2011-01-04",
+    "linksWith": [
+      { "Jinx": "Sister\nEnnemy", "Vi": "Potential Girlfriend\nFriends" }
+    ]
+  },
+  {
+    "name": "Camille",
+    "world": "Piltover",
+    "id": 19,
+    "key": 164,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2016-12-07",
+    "linksWith": [{ "Jhin": "Ennemy", "Renata": "???" }]
+  },
+  {
+    "name": "Cassiopeia",
+    "world": "Noxus",
+    "id": 20,
+    "key": 69,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage"],
+    "release": "2010-12-14",
+    "linksWith": [
+      { "Katarina": "Sister", "Sivir": "Ennemy", "Talon": "Brother" }
+    ]
+  },
+  {
+    "name": "ChoGath",
+    "world": "Void",
+    "id": 21,
+    "key": 31,
+    "damages_type": "AP",
+    "role": ["Top"],
+    "type": ["Tank", "Mage"],
+    "release": "2009-06-26"
+  },
+  {
+    "name": "Corki",
+    "world": "Bandle City",
+    "id": 22,
+    "key": 42,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Marksman"],
+    "release": "2009-09-19"
+  },
+  {
+    "name": "Darius",
+    "world": "Noxus",
+    "id": 23,
+    "key": 122,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2012-05-23",
+    "linksWith": [
+      {
+        "Draven": "Brother",
+        "Swain": "Allie",
+        "Katarina": "Allie",
+        "Talon": "Allie"
+      }
+    ]
+  },
+  {
+    "name": "Diana",
+    "world": "Targon",
+    "id": 24,
+    "key": 131,
+    "damages_type": "AP",
+    "role": ["Jungle", "Mid"],
+    "type": ["Fighter", "Mage"],
+    "release": "2012-08-07",
+    "linksWith": [{ "Nami": "Allie", "Aphelios": "Potential Friends" }]
+  },
+  {
+    "name": "Draven",
+    "world": "Noxus",
+    "id": 25,
+    "key": 119,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2012-06-06",
+    "linksWith": [{ "Darius": "Brother", "Swain": "???" }]
+  },
+  {
+    "name": "DrMundo",
+    "world": "Zaun",
+    "id": 26,
+    "key": 36,
+    "damages_type": "AP",
+    "role": ["Top", "Jungle"],
+    "type": ["Fighter", "Tank"],
+    "release": "2009-09-02"
+  },
+  {
+    "name": "Ekko",
+    "world": "Zaun",
+    "id": 27,
+    "key": 245,
+    "damages_type": "AP",
+    "role": ["Mid", "Jungle"],
+    "type": ["Assassin", "Fighter"],
+    "release": "2015-05-29",
+    "linksWith": [
+      {
+        "Jinx": "Potential Friends",
+        "Vi": "Potential Friends",
+        "Renata": "???"
+      }
+    ]
+  },
+  {
+    "name": "Elise",
+    "world": "Shadow Isles",
+    "id": 28,
+    "key": 60,
+    "damages_type": "AP",
+    "role": ["Jungle"],
+    "type": ["Mage", "Fighter"],
+    "release": "2012-10-26"
+  },
+  {
+    "name": "Evelynn",
+    "world": "Runeterra",
+    "id": 29,
+    "key": 28,
+    "damages_type": "AP",
+    "role": ["Jungle"],
+    "type": ["Assassin", "Mage"],
+    "release": "2009-05-01",
+    "linksWith": [{ "Vayne": "Ennemy" }]
+  },
+  {
+    "name": "Ezreal",
+    "world": "Piltover",
+    "id": 30,
+    "key": 81,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman", "Mage"],
+    "release": "2010-03-16",
+    "linksWith": [
+      {
+        "Heimerdinger": "Mentor",
+        "Lux": "Potential Girlfriend",
+        "Zoe": "Potential Girlfriend"
+      }
+    ]
+  },
+  {
+    "name": "Fiddlesticks",
+    "world": "Runeterra",
+    "id": 31,
+    "key": 9,
+    "damages_type": "AP",
+    "role": ["Jungle"],
+    "type": ["Mage", "Support"],
+    "release": "2009-02-21"
+  },
+  {
+    "name": "Fiora",
+    "world": "Demacia",
+    "id": 32,
+    "key": 114,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Assassin"],
+    "release": "2012-02-29"
+  },
+  {
+    "name": "Fizz",
+    "world": "Bilgewater",
+    "id": 33,
+    "key": 105,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Assassin", "Fighter"],
+    "release": "2011-11-15"
+  },
+  {
+    "name": "Galio",
+    "world": "Demacia",
+    "id": 34,
+    "key": 3,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Tank", "Mage"],
+    "release": "2010-08-10",
+    "linksWith": [{ "Lux": "Friends", "Sylas": "Friends" }]
+  },
+  {
+    "name": "Gangplank",
+    "world": "Bilgewater",
+    "id": 35,
+    "key": 41,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter"],
+    "release": "2009-08-19",
+    "linksWith": [
+      {
+        "Illaoi": "Girlfriend",
+        "Graves": "Ennemy",
+        "Swain": "Ennemy",
+        "Zed": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Garen",
+    "world": "Demacia",
+    "id": 36,
+    "key": 86,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2010-04-27",
+    "linksWith": [
+      {
+        "Lux": "Sister",
+        "JarvanIV": "Friends",
+        "Quinn": "Allie",
+        "XinZhao": "Allie",
+        "Nocturne": "Ennemy",
+        "Katarina": "Potential Girlfriend"
+      }
+    ]
+  },
+  {
+    "name": "Gnar",
+    "world": "Freljord",
+    "id": 37,
+    "key": 150,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2014-08-14"
+  },
+  {
+    "name": "Gragas",
+    "world": "Freljord",
+    "id": 38,
+    "key": 79,
+    "damages_type": "AP",
+    "role": ["Top", "Mid"],
+    "type": ["Fighter", "Mage"],
+    "release": "2010-02-02",
+    "linksWith": [{ "Ashe": "Friends", "Jax": "???" }]
+  },
+  {
+    "name": "Graves",
+    "world": "Bilgewater",
+    "id": 39,
+    "key": 104,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Marksman"],
+    "release": "2011-10-19",
+    "linksWith": [
+      {
+        "TwistedFate": "Friends",
+        "Gangplank": "Ennemy",
+        "MissFortune": "Allie",
+        "Nilah": "???"
+      }
+    ]
+  },
+  {
+    "name": "Gwen",
+    "world": "Shadow Isles",
+    "id": 40,
+    "key": 887,
+    "damages_type": "AP",
+    "role": ["Top"],
+    "type": ["Fighter", "Assassin"],
+    "release": "2021-04-15",
+    "linksWith": [{ "Maokai": "Ennemy", "Viego": "Ennemy", "Yorick": "Ennemy" }]
+  },
+  {
+    "name": "Hecarim",
+    "world": "Shadow Isles",
+    "id": 41,
+    "key": 120,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Fighter", "Tank"],
+    "release": "2012-04-18",
+    "linksWith": [{ "Viego": "Allie", "Kallista": "Ennemy" }]
+  },
+  {
+    "name": "Heimerdinger",
+    "world": "Piltover",
+    "id": 42,
+    "key": 74,
+    "damages_type": "AP",
+    "role": ["Mid", "Top", "Support"],
+    "type": ["Mage", "Support"],
+    "release": "2009-10-10",
+    "linksWith": [
+      { "Ziggs": "Allie", "Rumble": "Ennemy", "Ezreal": "Apprentice" }
+    ]
+  },
+  {
+    "name": "Illaoi",
+    "world": "Ionia",
+    "id": 43,
+    "key": 420,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2015-11-24",
+    "linksWith": [
+      { "MissFortune": "Friends", "Gangplank": "Boyfriend", "Nilah": "???" }
+    ]
+  },
+  {
+    "name": "Irelia",
+    "world": "Ionia",
+    "id": 44,
+    "key": 39,
+    "damages_type": "AD",
+    "role": ["Top", "Mid"],
+    "type": ["Fighter", "Assassin"],
+    "release": "2010-11-16",
+    "linksWith": [{ "Swain": "Ennemy" }]
+  },
+  {
+    "name": "Ivern",
+    "world": "Ionia",
+    "id": 45,
+    "key": 427,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Support", "Mage"],
+    "release": "2016-10-05",
+    "linksWith": [{ "Lillia": "Family" }]
+  },
+  {
+    "name": "Janna",
+    "world": "Zaun",
+    "id": 46,
+    "key": 40,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Support", "Mage"],
+    "release": "2009-09-02"
+  },
+  {
+    "name": "JarvanIV",
+    "world": "Demacia",
+    "id": 47,
+    "key": 59,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Tank", "Fighter"],
+    "release": "2011-03-01",
+    "linksWith": [
+      {
+        "Garen": "Friends",
+        "Shyvana": "Friends",
+        "XinZhao": "Allie\nMentor",
+        "Quinn": "Allie",
+        "Sion": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Jax",
+    "world": "Runeterra",
+    "id": 48,
+    "key": 24,
+    "damages_type": "AD",
+    "role": ["Jungle", "Top"],
+    "type": ["Fighter", "Assassin"],
+    "release": "2009-02-21",
+    "linksWith": [{ "Gragas": "???" }]
+  },
+  {
+    "name": "Jayce",
+    "world": "Piltover",
+    "id": 49,
+    "key": 126,
+    "damages_type": "AD",
+    "role": ["Mid", "Top"],
+    "type": ["Fighter", "Marksman"],
+    "release": "2012-07-07",
+    "linksWith": [{ "Skarner": "Ennemy", "Viktor": "Ennemy" }]
+  },
+  {
+    "name": "Jhin",
+    "world": "Ionia",
+    "id": 50,
+    "key": 202,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2016-02-01",
+    "linksWith": [{ "Camille": "Ennemy", "Shen": "Ennemy" }]
+  },
+  {
+    "name": "Jinx",
+    "world": "Zaun",
+    "id": 51,
+    "key": 222,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2013-10-10",
+    "linksWith": [
+      {
+        "Vi": "Sister\nEnnemy",
+        "Ziggs": "Friends",
+        "Caitlyn": "Ennemy",
+        "Ekko": "Potential Friends"
+      }
+    ]
+  },
+  {
+    "name": "KaiSa",
+    "world": "Void",
+    "id": 52,
+    "key": 145,
+    "damages_type": "AD",
+    "role": ["ADC", "Mid"],
+    "type": ["Marksman"],
+    "release": "2018-03-07",
+    "linksWith": [{ "Kassadin": "Father\nEnnemy", "Malzahar": "Ennemy" }]
+  },
+  {
+    "name": "Kalista",
+    "world": "Shadow Isles",
+    "id": 53,
+    "key": 429,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2014-11-20",
+    "linksWith": [{ "Viego": "Allie\nEnnemy", "Hecarim": "Ennemy" }]
+  },
+  {
+    "name": "Karma",
+    "world": "Ionia",
+    "id": 54,
+    "key": 43,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Mage", "Support"],
+    "release": "2011-02-01",
+    "linksWith": [{ "Sion": "Ennemy" }]
+  },
+  {
+    "name": "Karthus",
+    "world": "Shadow Isles",
+    "id": 55,
+    "key": 30,
+    "damages_type": "AP",
+    "role": ["Jungle", "ADC"],
+    "type": ["Mage"],
+    "release": "2009-06-12",
+    "linksWith": [{ "Maokai": "Ennemy", "Yorick": "Ennemy" }]
+  },
+  {
+    "name": "Kassadin",
+    "world": "Void",
+    "id": 56,
+    "key": 38,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Assassin", "Mage"],
+    "release": "2009-06-12",
+    "linksWith": [{ "KaiSa": "Daughter\nEnnemy", "Malzahar": "Ennemy" }]
+  },
+  {
+    "name": "Katarina",
+    "world": "Noxus",
+    "id": 57,
+    "key": 55,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Assassin", "Mage"],
+    "release": "2009-09-19",
+    "linksWith": [
+      {
+        "Cassiopeia": "Sister",
+        "Talon": "Brother",
+        "Garen": "Potential Boyfriend",
+        "Darius": "Allie",
+        "Swain": "Allie"
+      }
+    ]
+  },
+  {
+    "name": "Kayle",
+    "world": "Demacia",
+    "id": 58,
+    "key": 10,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Support"],
+    "release": "2009-02-21",
+    "linksWith": [{ "Morgana": "Sister" }]
+  },
+  {
+    "name": "Kayn",
+    "world": "Ionia",
+    "id": 59,
+    "key": 141,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Fighter", "Assassin"],
+    "release": "2017-07-12",
+    "linksWith": [{ "Zed": "Mentor" }]
+  },
+  {
+    "name": "Kennen",
+    "world": "Ionia",
+    "id": 60,
+    "key": 85,
+    "damages_type": "AP",
+    "role": ["Top"],
+    "type": ["Mage", "Marksman"],
+    "release": "2010-04-08",
+    "linksWith": [{ "Akali": "Friends", "Shen": "Friends" }]
+  },
+  {
+    "name": "Khazix",
+    "world": "Void",
+    "id": 61,
+    "key": 121,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Assassin"],
+    "release": "2012-09-27",
+    "linksWith": [{ "Rengar": "Ennemy" }]
+  },
+  {
+    "name": "Kindred",
+    "world": "Runeterra",
+    "id": 62,
+    "key": 203,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Marksman"],
+    "release": "2015-10-14"
+  },
+  {
+    "name": "Kled",
+    "world": "Noxus",
+    "id": 63,
+    "key": 240,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2016-08-10"
+  },
+  {
+    "name": "KogMaw",
+    "world": "Void",
+    "id": 64,
+    "key": 96,
+    "damages_type": "AP",
+    "role": ["ADC"],
+    "type": ["Marksman", "Mage"],
+    "release": "2010-06-24",
+    "linksWith": [{ "Malzahar": "Friends" }]
+  },
+  {
+    "name": "Leblanc",
+    "world": "Noxus",
+    "id": 65,
+    "key": 7,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Assassin", "Mage"],
+    "release": "2010-11-02",
+    "linksWith": [
+      { "Mordekaiser": "Ennemy", "Swain": "Ennemy", "Rell": "Ennemy" }
+    ]
+  },
+  {
+    "name": "LeeSin",
+    "world": "Ionia",
+    "id": 66,
+    "key": 64,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Fighter", "Assassin"],
+    "release": "2011-04-01",
+    "linksWith": [{ "Udyr": "Friends" }]
+  },
+  {
+    "name": "Leona",
+    "world": "Targon",
+    "id": 67,
+    "key": 89,
+    "damages_type": "AD",
+    "role": ["Support"],
+    "type": ["Tank", "Support"],
+    "release": "2011-07-13",
+    "linksWith": [{ "Diana": "Ennemy", "Aphelios": "Potential Ennemy" }]
+  },
+  {
+    "name": "Lillia",
+    "world": "Ionia",
+    "id": 68,
+    "key": 876,
+    "damages_type": "AP",
+    "role": ["Top"],
+    "type": ["Fighter", "Mage"],
+    "release": "2020-07-22",
+    "linksWith": [{ "Ivern": "Family" }]
+  },
+  {
+    "name": "Lissandra",
+    "world": "Freljord",
+    "id": 69,
+    "key": 127,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage"],
+    "release": "2013-04-30",
+    "linksWith": [
+      {
+        "Trundle": "Friends\nAllie",
+        "Ashe": "Ennemy",
+        "Anivia": "Ennemy",
+        "Sejuani": "Ennemy",
+        "Velkoz": "Ennemy",
+        "Volibear": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Lucian",
+    "world": "Runeterra",
+    "id": 70,
+    "key": 236,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2013-08-22",
+    "linksWith": [{ "Senna": "Girlfriend", "Thresh": "Ennemy", "Vex": "???" }]
+  },
+  {
+    "name": "Lulu",
+    "world": "Bandle City",
+    "id": 71,
+    "key": 117,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Support", "Mage"],
+    "release": "2012-03-20"
+  },
+  {
+    "name": "Lux",
+    "world": "Demacia",
+    "id": 72,
+    "key": 99,
+    "damages_type": "AP",
+    "role": ["Mid", "Support"],
+    "type": ["Mage", "Support"],
+    "release": "2010-10-19",
+    "linksWith": [
+      {
+        "Garen": "Brother",
+        "Ezreal": "Potential Boyfriend",
+        "Galio": "Friends",
+        "Sylas": "Friends",
+        "Zoe": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Malphite",
+    "world": "Ixtal",
+    "id": 73,
+    "key": 54,
+    "damages_type": "AP",
+    "role": ["Top", "Support"],
+    "type": ["Tank", "Fighter"],
+    "release": "2009-09-02"
+  },
+  {
+    "name": "Malzahar",
+    "world": "Void",
+    "id": 74,
+    "key": 90,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage", "Assassin"],
+    "release": "2010-06-01",
+    "linksWith": [
+      { "KogMaw": "Friends", "KaiSa": "Ennemy", "Kassadin": "Ennemy" }
+    ]
+  },
+  {
+    "name": "Maokai",
+    "world": "Shadow Isles",
+    "id": 75,
+    "key": 57,
+    "damages_type": "AP",
+    "role": ["Support", "Top"],
+    "type": ["Tank", "Mage"],
+    "release": "2011-02-16",
+    "linksWith": [
+      {
+        "Gwen": "Ennemy",
+        "Kartus": "Ennemy",
+        "Viego": "Ennemy",
+        "Yorick": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "MasterYi",
+    "world": "Ionia",
+    "id": 76,
+    "key": 11,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Assassin", "Fighter"],
+    "release": "2009-02-21",
+    "linksWith": [{ "Wukong": "Mentor" }]
+  },
+  {
+    "name": "MissFortune",
+    "world": "Bilgewater",
+    "id": 77,
+    "key": 21,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2010-09-08",
+    "linksWith": [
+      {
+        "Illaoi": "Friends",
+        "TwistedFate": "Friends",
+        "Graves": "Allie",
+        "Gangplank": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Mordekaiser",
+    "world": "Noxus",
+    "id": 78,
+    "key": 82,
+    "damages_type": "AP",
+    "role": ["Top"],
+
+    "type": ["Fighter"],
+    "release": "2010-02-24",
+    "linksWith": [
+      { "Leblanc": "Ennemy", "Veigar": "Ennemy", "Vladimir": "Ennemy" }
+    ]
+  },
+  {
+    "name": "Morgana",
+    "world": "Demacia",
+    "id": 79,
+    "key": 25,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Mage", "Support"],
+    "release": "2009-02-21",
+    "linksWith": [{ "Kayle": "Family" }]
+  },
+  {
+    "name": "Nami",
+    "world": "Runeterra",
+    "id": 80,
+    "key": 267,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Support", "Mage"],
+    "release": "2012-12-07",
+    "linksWith": [{ "Diana": "Allie" }]
+  },
+  {
+    "name": "Nasus",
+    "world": "Shurima",
+    "id": 81,
+    "key": 75,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2009-10-01",
+    "linksWith": [
+      {
+        "Sivir": "Friends",
+        "Talliyah": "Friends",
+        "Renekton": "Ennemy",
+        "Xerath": "Ennemy",
+        "Azir": "Allie"
+      }
+    ]
+  },
+  {
+    "name": "Nautilus",
+    "world": "Bilgewater",
+    "id": 82,
+    "key": 111,
+    "damages_type": "AD",
+    "role": ["Support"],
+    "type": ["Tank", "Fighter"],
+    "release": "2012-02-14"
+  },
+  {
+    "name": "Neeko",
+    "world": "Ixtal",
+    "id": 83,
+    "key": 518,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage", "Support"],
+    "release": "2018-12-05",
+    "linksWith": [{ "Nidalee": "Potential Girlfriend" }]
+  },
+  {
+    "name": "Nidalee",
+    "world": "Ixtal",
+    "id": 84,
+    "key": 76,
+    "damages_type": "AP",
+    "role": ["Jungle"],
+    "type": ["Assassin", "Mage"],
+    "release": "2009-12-17",
+    "linksWith": [{ "Neeko": "Potential Girlfriend" }]
+  },
+  {
+    "name": "Nilah",
+    "world": "Bilgewater",
+    "id": 85,
+    "key": 895,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2022-07-13",
+    "linksWith": [{ "Graves": "???", "Illaoi": "???", "Viego": "???" }]
+  },
+  {
+    "name": "Nocturne",
+    "world": "Runeterra",
+    "id": 86,
+    "key": 56,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Assassin", "Fighter"],
+    "release": "2011-03-15",
+    "linksWith": [{ "Garen": "Ennemy" }]
+  },
+  {
+    "name": "Nunu",
+    "world": "Freljord",
+    "id": 87,
+    "key": 20,
+    "damages_type": "AP",
+    "role": ["Jungle"],
+    "type": ["Tank", "Fighter"],
+    "release": "2009-02-21"
+  },
+  {
+    "name": "Olaf",
+    "world": "Freljord",
+    "id": 88,
+    "key": 2,
+    "damages_type": "AD",
+    "role": ["Top", "Jungle"],
+    "type": ["Tank"],
+    "release": "2010-06-09",
+    "linksWith": [{ "Sejuani": "Friends" }]
+  },
+  {
+    "name": "Orianna",
+    "world": "Piltover",
+    "id": 89,
+    "key": 61,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage", "Support"],
+    "release": "2011-06-01",
+    "linksWith": [{ "Blitzcrank": "Allie" }]
+  },
+  {
+    "name": "Ornn",
+    "world": "Freljord",
+    "id": 90,
+    "key": 516,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Tank", "Fighter"],
+    "release": "2017-08-23",
+    "linksWith": [{ "Anivia": "Sister", "Volibear": "Brother\nEnnemy" }]
+  },
+  {
+    "name": "Pantheon",
+    "world": "Targon",
+    "id": 91,
+    "key": 80,
+    "damages_type": "AD",
+    "role": ["Mid", "Support"],
+    "type": ["Fighter", "Assassin"],
+    "release": "2010-02-02",
+    "linksWith": [
+      { "Aatrox": "Ennemy", "AurelionSol": "Ennemy", "Zoe": "Ennemy" }
+    ]
+  },
+  {
+    "name": "Poppy",
+    "world": "Demacia",
+    "id": 92,
+    "key": 78,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Tank", "Fighter"],
+    "release": "2010-01-13"
+  },
+  {
+    "name": "Pyke",
+    "world": "Bilgewater",
+    "id": 93,
+    "key": 555,
+    "damages_type": "AD",
+    "role": ["Support", "Mid"],
+    "type": ["Support"],
+    "release": "2018-05-31"
+  },
+  {
+    "name": "Qiyana",
+    "world": "Ixtal",
+    "id": 94,
+    "key": 246,
+    "damages_type": "AD",
+    "role": ["Mid"],
+    "type": ["Assassin", "Fighter"],
+    "release": "2019-06-28"
+  },
+  {
+    "name": "Quinn",
+    "world": "Demacia",
+    "id": 95,
+    "key": 133,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Marksman", "Assassin"],
+    "release": "2013-03-01",
+    "linksWith": [{ "Garen": "Allie", "XinZhao": "Allie" }]
+  },
+  {
+    "name": "Rakan",
+    "world": "Ionia",
+    "id": 96,
+    "key": 497,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Support"],
+    "release": "2017-04-19",
+    "linksWith": [{ "Xayah": "Girlfriend" }]
+  },
+  {
+    "name": "Rammus",
+    "world": "Shurima",
+    "id": 97,
+    "key": 33,
+    "damages_type": "AP",
+    "role": ["Jungle"],
+    "type": ["Tank"],
+    "release": "2009-07-10"
+  },
+  {
+    "name": "RekSai",
+    "world": "Void",
+    "id": 98,
+    "key": 421,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Fighter"],
+    "release": "2014-12-11"
+  },
+  {
+    "name": "Rell",
+    "world": "Noxus",
+    "id": 99,
+    "key": 526,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Tank"],
+    "release": "2020-12-10",
+    "linksWith": [{ "Leblanc": "Ennemy" }]
+  },
+  {
+    "name": "Renata",
+    "world": "Zaun",
+    "id": 100,
+    "key": 888,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Support"],
+    "release": "2022-02-17",
+    "linksWith": [{ "Camille": "Ennemy", "Ekko": "???", "Viktor": "???" }]
+  },
+  {
+    "name": "Renekton",
+    "world": "Shurima",
+    "id": 101,
+    "key": 58,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2011-01-18",
+    "linksWith": [
+      {
+        "Azir": "Friends",
+        "Sivir": "Friends",
+        "Nasus": "Ennemy",
+        "Xerath": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Rengar",
+    "world": "Ixtal",
+    "id": 102,
+    "key": 107,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Assassin", "Fighter"],
+    "release": "2012-08-21",
+    "linksWith": [{ "Khazix": "Ennemy" }]
+  },
+  {
+    "name": "Riven",
+    "world": "Runeterra",
+    "id": 103,
+    "key": 92,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Assassin"],
+    "release": "2011-09-14",
+    "linksWith": [{ "Singed": "Ennemy", "Yasuo": "Potential Ennemy" }]
+  },
+  {
+    "name": "Rumble",
+    "world": "Bandle City",
+    "id": 104,
+    "key": 68,
+    "damages_type": "AP",
+    "role": ["Top", "Mid"],
+    "type": ["Fighter", "Mage"],
+    "release": "2011-04-26",
+    "linksWith": [
+      { "Tristanna": "Potential girlfriend", "Heimerdinger": "Ennemy" }
+    ]
+  },
+  {
+    "name": "Ryze",
+    "world": "Runeterra",
+    "id": 105,
+    "key": 13,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage", "Fighter"],
+    "release": "2009-02-21",
+    "linksWith": [{ "Brand": "Ennemy\nApprentice" }]
+  },
+  {
+    "name": "Samira",
+    "world": "Noxus",
+    "id": 106,
+    "key": 360,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2020-09-21"
+  },
+  {
+    "name": "Sejuani",
+    "world": "Freljord",
+    "id": 107,
+    "key": 113,
+    "damages_type": "???",
+    "role": ["Jungle"],
+    "type": ["Tank"],
+    "release": "2012-01-17",
+    "linksWith": [
+      {
+        "Udyr": "Potential Family",
+        "Olaf": "Friends",
+        "Ashe": "Friends\nEnnemy",
+        "Lissandra": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Senna",
+    "world": "Runeterra",
+    "id": 108,
+    "key": 235,
+    "damages_type": "AD",
+    "role": ["Support"],
+    "type": ["Marksman", "Support"],
+    "release": "2019-11-10",
+    "linksWith": [{ "Lucian": "Boyfriend", "Tresh": "Ennemy", "Vex": "???" }]
+  },
+  {
+    "name": "Seraphine",
+    "world": "Piltover",
+    "id": 109,
+    "key": 147,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Mage", "Support"],
+    "release": "2020-10-29"
+  },
+  {
+    "name": "Sett",
+    "world": "Ionia",
+    "id": 110,
+    "key": 875,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter"],
+    "release": "2020-01-14"
+  },
+  {
+    "name": "Shaco",
+    "world": "Runeterra",
+    "id": 111,
+    "key": 35,
+    "damages_type": "AP",
+    "role": ["Jungle"],
+    "type": ["Assassin"],
+    "release": "2009-10-10"
+  },
+  {
+    "name": "Shen",
+    "world": "Ionia",
+    "id": 112,
+    "key": 98,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Tank"],
+    "release": "2010-03-24",
+    "linksWith": [
+      {
+        "Zed": "Family\nEnnemy",
+        "Akali": "Friends",
+        "Shen": "Friends",
+        "Jhin": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Shyvana",
+    "world": "Demacia",
+    "id": 113,
+    "key": 102,
+    "damages_type": "AP",
+    "role": ["Jungle"],
+    "type": ["Fighter", "Tank"],
+    "release": "2011-11-01",
+    "linksWith": [{ "Jarvan_IV": "Friends" }]
+  },
+  {
+    "name": "Singed",
+    "world": "Zaun",
+    "id": 114,
+    "key": 27,
+    "damages_type": "AP",
+    "role": ["Top"],
+    "type": ["Tank", "Fighter"],
+    "release": "2009-04-18",
+    "linksWith": [{ "Riven": "Ennemy", "Warwick": "Ennemy" }]
+  },
+  {
+    "name": "Sion",
+    "world": "Noxus",
+    "id": 115,
+    "key": 14,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Tank", "Fighter"],
+    "release": "2009-02-21",
+    "linksWith": [{ "Jarvan_IV": "Ennemy", "Karma": "Ennemy" }]
+  },
+  {
+    "name": "Sivir",
+    "world": "Shurima",
+    "id": 116,
+    "key": 15,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2009-02-21",
+    "linksWith": [
+      {
+        "Azir": "Family",
+        "Nasus": "Friends",
+        "Renekton": "Friends",
+        "Talliyah": "Friends",
+        "Cassiopeia": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Skarner",
+    "world": "Shurima",
+    "id": 117,
+    "key": 72,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Fighter", "Tank"],
+    "release": "2011-08-09",
+    "linksWith": [{ "Jayce": "Ennemy" }]
+  },
+  {
+    "name": "Sona",
+    "world": "Demacia",
+    "id": 118,
+    "key": 37,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Support", "Mage"],
+    "release": "2010-09-21"
+  },
+  {
+    "name": "Soraka",
+    "world": "Targon",
+    "id": 119,
+    "key": 16,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Support", "Mage"],
+    "release": "2009-02-21"
+  },
+  {
+    "name": "Swain",
+    "world": "Noxus",
+    "id": 120,
+    "key": 50,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Mage", "Fighter"],
+    "release": "2010-10-05",
+    "linksWith": [
+      {
+        "Darius": "Allie",
+        "Katarina": "Allie",
+        "Talon": "Allie",
+        "Gangplank": "Ennemy",
+        "Leblanc": "Ennemy",
+        "Irelia": "Ennemy",
+        "Urgot": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Sylas",
+    "world": "Freljord",
+    "id": 121,
+    "key": 517,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage", "Assassin"],
+    "release": "2019-01-25",
+    "linksWith": [{ "Galio": "Friends", "Lux": "Friends" }]
+  },
+  {
+    "name": "Syndra",
+    "world": "Ionia",
+    "id": 122,
+    "key": 134,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage", "Support"],
+    "release": "2021-09-13"
+  },
+  {
+    "name": "TahmKench",
+    "world": "Runeterra",
+    "id": 123,
+    "key": 223,
+    "damages_type": "AP",
+    "role": ["Top", "Support"],
+    "type": ["Support", "Tank"],
+    "release": "2015-07-09"
+  },
+  {
+    "name": "Taliyah",
+    "world": "Shurima",
+    "id": 124,
+    "key": 163,
+    "damages_type": "AP",
+    "role": ["Mid", "Jungle"],
+    "type": ["Mage", "Support"],
+    "release": "2016-05-18",
+    "linksWith": [{ "Nasus": "Friends", "Sivir": "Friends", "Yasuo": "Mentor" }]
+  },
+  {
+    "name": "Talon",
+    "world": "Noxus",
+    "id": 125,
+    "key": 91,
+    "damages_type": "AD",
+    "role": ["Mid", "Jungle"],
+    "type": ["Assassin"],
+    "release": "2011-08-24",
+    "linksWith": [
+      {
+        "Cassiopeia": "Sister",
+        "Katarina": "Sister",
+        "Darius": "Allie",
+        "Swain": "Allie"
+      }
+    ]
+  },
+  {
+    "name": "Taric",
+    "world": "Targon",
+    "id": 126,
+    "key": 44,
+    "damages_type": "???",
+    "role": ["Support"],
+    "type": ["Support", "Fighter"],
+    "release": "2009-08-19"
+  },
+  {
+    "name": "Teemo",
+    "world": "Bandle City",
+    "id": 127,
+    "key": 17,
+    "damages_type": "AP",
+    "role": ["Top"],
+    "type": ["Marksman", "Assassin"],
+    "release": "2009-02-21",
+    "linksWith": [{ "Tristanna": "Potential Girlfriend" }]
+  },
+  {
+    "name": "Thresh",
+    "world": "Shadow Isles",
+    "id": 128,
+    "key": 412,
+    "damages_type": "???",
+    "role": ["Support"],
+    "type": ["Support", "Fighter"],
+    "release": "2013-01-23",
+    "linksWith": [{ "Lucian": "Ennemy", "Senna": "Ennemy", "Vex": "???" }]
+  },
+  {
+    "name": "Tristana",
+    "world": "Bandle City",
+    "id": 129,
+    "key": 18,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman", "Assassin"],
+    "release": "2009-02-21",
+    "linksWith": [{ "Teemo": "Potential Boyfriend", "Lulu": "Friends" }]
+  },
+  {
+    "name": "Trundle",
+    "world": "Freljord",
+    "id": 130,
+    "key": 48,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2010-12-01",
+    "linksWith": [{ "Lissandra": "Friends\nAllie" }]
+  },
+  {
+    "name": "Tryndamere",
+    "world": "Freljord",
+    "id": 131,
+    "key": 23,
+    "damages_type": "AD",
+    "role": ["Top"],
+    "type": ["Fighter", "Assassin"],
+    "release": "2009-05-01",
+    "linksWith": [{ "Ashe": "Girlfriend", "Aatrox": "Ennemy" }]
+  },
+  {
+    "name": "TwistedFate",
+    "world": "Bilgewater",
+    "id": 132,
+    "key": 4,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage"],
+    "release": "2009-02-21",
+    "linksWith": [
+      { "Miss_Fortune": "Friends", "Graves": "Friends", "Gangplank": "Ennemy" }
+    ]
+  },
+  {
+    "name": "Twitch",
+    "world": "Zaun",
+    "id": 133,
+    "key": 29,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman", "Assassin"],
+    "release": "2009-05-01"
+  },
+  {
+    "name": "Udyr",
+    "world": "Freljord",
+    "id": 134,
+    "key": 77,
+    "damages_type": "???",
+    "role": ["Jungle"],
+    "type": ["Fighter", "Tank"],
+    "release": "2009-12-02",
+    "linksWith": [
+      {
+        "Sejuani": "Potential Family",
+        "Lee_Sin": "Friends",
+        "Volibear": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Urgot",
+    "world": "Zaun",
+    "id": 135,
+    "key": 6,
+    "damages_type": "???",
+    "role": ["Top"],
+    "type": ["Fighter", "Tank"],
+    "release": "2010-08-24",
+    "linksWith": [{ "Swain": "Ennemy" }]
+  },
+  {
+    "name": "Varus",
+    "world": "Ionia",
+    "id": 136,
+    "key": 110,
+    "damages_type": "???",
+    "role": ["ADC"],
+    "type": ["Marksman", "Mage"],
+    "release": "2012-05-08"
+  },
+  {
+    "name": "Vayne",
+    "world": "Demacia",
+    "id": 137,
+    "key": 67,
+    "damages_type": "AD",
+    "role": ["Top", "ADC"],
+    "type": ["Marksman", "Assassin"],
+    "release": "2011-05-10",
+    "linksWith": [{ "Evelynn": "Ennemy" }]
+  },
+  {
+    "name": "Veigar",
+    "world": "Bandle City",
+    "id": 138,
+    "key": 45,
+    "damages_type": "AP",
+    "role": ["Mid", "ADC", "Support"],
+    "type": ["Mage"],
+    "release": "2009-07-24",
+    "linksWith": [{ "Mordekaiser": "Apprentice" }]
+  },
+  {
+    "name": "Velkoz",
+    "world": "Bandle City",
+    "id": 139,
+    "key": 161,
+    "damages_type": "AP",
+    "role": ["Mid", "Support"],
+    "type": ["Mage"],
+    "release": "2014-02-27",
+    "linksWith": [{ "Zed": "Ennemy" }]
+  },
+  {
+    "name": "Vex",
+    "world": "Shadow Isles",
+    "id": 140,
+    "key": 711,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage"],
+    "release": "2021-09-23",
+    "linksWith": [{ "Lucian": "???", "Senna": "???", "Thresh": "???" }]
+  },
+  {
+    "name": "Vi",
+    "world": "Piltover",
+    "id": 141,
+    "key": 254,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Fighter"],
+    "release": "2012-12-19",
+    "linksWith": [
+      {
+        "Jinx": "Sister\nEnnemy",
+        "Caitlyn": "Potential Girlfriend\nFriends",
+        "Ekko": "Potential Friends"
+      }
+    ]
+  },
+  {
+    "name": "Viego",
+    "world": "Shadow Isles",
+    "id": 142,
+    "key": 234,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Assassin"],
+    "release": "2021-01-21",
+    "linksWith": [
+      {
+        "Hecarim": "Allie\nEnnemy",
+        "Kalista": "Allie\nEnnemy",
+        "Gwen": "Ebnnemy",
+        "Maokai": "Ennemy",
+        "Yorick": "Ennemy",
+        "Nilah": "???"
+      }
+    ]
+  },
+  {
+    "name": "Viktor",
+    "world": "Zaun",
+    "id": 143,
+    "key": 112,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage"],
+    "release": "2011-12-29",
+    "linksWith": [{ "Blitzcrank": "Son", "Jayce": "Ennemy", "Renata": "???" }]
+  },
+  {
+    "name": "Vladimir",
+    "world": "Noxus",
+    "id": 144,
+    "key": 8,
+    "damages_type": "AP",
+    "role": ["Top", "Mid"],
+    "type": ["Mage"],
+    "release": "2010-07-27",
+    "linksWith": [{ "Mordekaiser": "Ennemy" }]
+  },
+  {
+    "name": "Volibear",
+    "world": "Freljord",
+    "id": 145,
+    "key": 106,
+    "damages_type": "AD",
+    "role": ["Top", "Jungle"],
+    "type": ["Fighter"],
+    "release": "2011-11-29",
+    "linksWith": [
+      {
+        "Ornn": "Brother\nEnnemy",
+        "Anivia": "Sister",
+        "Lissandra": "Ennemy",
+        "Udyr": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "Warwick",
+    "world": "Zaun",
+    "id": 146,
+    "key": 19,
+    "damages_type": "AD",
+    "role": ["Jungle", "Top"],
+    "type": ["Fighter"],
+    "release": "2009-02-21",
+    "linksWith": [{ "Singed": "Ennemy\nMentor" }]
+  },
+  {
+    "name": "Wukong",
+    "world": "Ionia",
+    "id": 147,
+    "key": 62,
+    "damages_type": "AD",
+    "role": ["Top", "Jungle"],
+    "type": ["Fighter"],
+    "release": "2011-07-26",
+    "linksWith": [{ "Master_Yi": "Mentor" }]
+  },
+  {
+    "name": "Xayah",
+    "world": "Ionia",
+    "id": 148,
+    "key": 498,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2017-04-19",
+    "linksWith": [{ "Rakan": "Boyfriend" }]
+  },
+  {
+    "name": "Xerath",
+    "world": "Shurima",
+    "id": 149,
+    "key": 101,
+    "damages_type": "AP",
+    "role": ["Mid", "Support"],
+    "type": ["Mage"],
+    "release": "2011-10-05",
+    "linksWith": [
+      {
+        "Azir": "Friends\nTeacher\nEnnemy",
+        "Nasus": "Ennemy",
+        "Renekton": "Ennemy"
+      }
+    ]
+  },
+  {
+    "name": "XinZhao",
+    "world": "Demacia",
+    "id": 150,
+    "key": 5,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Fighter"],
+    "release": "2010-07-13",
+    "linksWith": [
+      { "Garen": "Friends", "Quinn": "Allie", "Jarvan_IV": "Allie" }
+    ]
+  },
+  {
+    "name": "Yasuo",
+    "world": "Ionia",
+    "id": 151,
+    "key": 157,
+    "damages_type": "AD",
+    "role": ["Mid", "Top", "ADC"],
+    "type": ["Fighter", "Assassin"],
+    "release": "2013-12-13",
+    "linksWith": [{ "Yone": "Brother\nEnnemy", "Talliyah": "Mentor" }]
+  },
+  {
+    "name": "Yone",
+    "world": "Ionia",
+    "id": 152,
+    "key": 777,
+    "damages_type": "AD",
+    "role": ["Mid", "Top"],
+    "type": ["Assassin"],
+    "release": "2020-08-06",
+    "linksWith": [{ "Yasuo": "Brother\nEnnemy" }]
+  },
+  {
+    "name": "Yorick",
+    "world": "Shadow Isles",
+    "id": 153,
+    "key": 83,
+    "damages_type": "???",
+    "role": ["Top"],
+    "type": ["Fighter"],
+    "release": "2011-06-22",
+    "linksWith": [{ "Gwen": "Ennemy", "Maokai": "Ennemy", "Viego": "Ennemy" }]
+  },
+  {
+    "name": "Yuumi",
+    "world": "Bandle City",
+    "id": 154,
+    "key": 350,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Support"],
+    "release": "2019-05-14",
+    "linksWith": [{ "Braum": "Friends" }]
+  },
+  {
+    "name": "Zac",
+    "world": "Zaun",
+    "id": 155,
+    "key": 154,
+    "damages_type": "AD",
+    "role": ["Jungle"],
+    "type": ["Tank"],
+    "release": "2013-03-29"
+  },
+  {
+    "name": "Zed",
+    "world": "Ionia",
+    "id": 156,
+    "key": 238,
+    "damages_type": "AD",
+    "role": ["Jungle", "Mid"],
+    "type": ["Assassin"],
+    "release": "2012-11-13",
+    "linksWith": [
+      { "Shen": "Family\nEnnemy", "Velkoz": "Ennemy", "Xayah": "Ennemy" }
+    ]
+  },
+  {
+    "name": "Zeri",
+    "world": "Zaun",
+    "id": 157,
+    "key": 221,
+    "damages_type": "AD",
+    "role": ["ADC"],
+    "type": ["Marksman"],
+    "release": "2022-01-20"
+  },
+  {
+    "name": "Ziggs",
+    "world": "Zaun",
+    "id": 158,
+    "key": 115,
+    "damages_type": "AP",
+    "role": ["ADC", "Mid"],
+    "type": ["Mage"],
+    "release": "2012-02-01",
+    "linksWith": [{ "Jinx": "Friends", "Heimerdinger": "Friends" }]
+  },
+  {
+    "name": "Zilean",
+    "world": "Runeterra",
+    "id": 159,
+    "key": 26,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Support", "Mage"],
+    "release": "2009-04-18"
+  },
+  {
+    "name": "Zoe",
+    "world": "Targon",
+    "id": 160,
+    "key": 142,
+    "damages_type": "AP",
+    "role": ["Mid"],
+    "type": ["Mage", "Support"],
+    "release": "2017-11-21",
+    "linksWith": [
+      { "Aatrox": "Ennemy", "Lux": "Ennemy", "Ezreal": "Potential Boyfriend" }
+    ]
+  },
+  {
+    "name": "Zyra",
+    "world": "Ixtal",
+    "id": 161,
+    "key": 143,
+    "damages_type": "AP",
+    "role": ["Support"],
+    "type": ["Mage", "Support"],
+    "release": "2012-07-24"
+  }
+]
