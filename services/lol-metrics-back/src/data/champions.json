@@ -954,6 +954,12 @@
     "alias": "Lillia"
   },
   {
+    "key": 799,
+    "world": "Noxus",
+    "release": "2024-11-06",
+    "alias": "Ambessa"
+  },
+  {
     "key": 800,
     "world": "Noxus",
     "release": "2025-01-23",
