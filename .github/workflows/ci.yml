@@ -10,6 +10,8 @@ jobs:
   build-and-test:
     name: Lint, Build & Test
     runs-on: ubuntu-latest
+    env:
+      COMMUNITY_DRAGON_API_URL: https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default
 
     steps:
       - name: 🛎️ Checkout repository
