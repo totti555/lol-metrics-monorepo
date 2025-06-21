@@ -67,18 +67,28 @@ export interface components {
              * @description Champion subtitle
              * @example the Nine-Tailed Fox
              */
-            description?: string;
+            description: string;
             /**
              * @description URL to square icon portrait
              * @example https://cdn.communitydragon.org/latest/lol-game-data/assets/v1/champion-icons/103.png
              */
-            squarePortrait?: string;
+            squarePortrait: string;
             /**
              * @description URL to splash art (centered)
              * @example https://cdn.communitydragon.org/latest/champion/Ahri/splash-art
              */
             clientPortrait?: string;
-            roles?: components["schemas"]["Role"][];
+            roles: components["schemas"]["Role"][];
+            /**
+             * @description Release date oh the champion
+             * @example 2025-06-21
+             */
+            releaseDate?: string;
+            /**
+             * @description The region or origin the champion belongs to in the League of Legends universe
+             * @example Piltover
+             */
+            world?: string;
         };
         /** @enum {string} */
         Role: "Top" | "Jungle" | "Mid" | "Bottom" | "Support";

@@ -50,7 +50,8 @@ describe("getAllChampions", () => {
           "https://cdn.communitydragon.org/latest/lol-game-data/assets/v1/champion-icons/103.png",
         clientPortrait: "https://api.cdragon.test/v1/loadscreen.jpg",
         roles: ["Mid"],
-        world: [],
+        releaseDate: "2009-02-21",
+        world: "Runeterra",
       },
       {
         id: "2",
@@ -61,7 +62,8 @@ describe("getAllChampions", () => {
           "https://cdn.communitydragon.org/latest/lol-game-data/assets/v1/champion-icons/84.png",
         clientPortrait: undefined,
         roles: ["Mid"],
-        world: [],
+        releaseDate: "2010-06-09",
+        world: "Freljord",
       },
     ]);
   });
@@ -84,7 +86,8 @@ describe("getAllChampions", () => {
           "https://cdn.communitydragon.org/latest/lol-game-data/assets/v1/champion-icons/84.png",
         clientPortrait: undefined,
         roles: ["Mid"],
-        world: [],
+        releaseDate: "2010-06-09",
+        world: "Freljord",
       },
     ]);
   });

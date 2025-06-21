@@ -1,12 +1,1016 @@
 [
   {
-    "id": "ahri",
-    "name": "Ahri",
-    "role": "Mage"
+    "key": 1,
+    "world": "Runeterra",
+    "release": "2009-02-21",
+    "alias": "Annie"
   },
   {
-    "id": "yasuo",
-    "name": "Yasuo",
-    "role": "Fighter"
+    "key": 2,
+    "world": "Freljord",
+    "release": "2010-06-09",
+    "alias": "Olaf"
+  },
+  {
+    "key": 3,
+    "world": "Demacia",
+    "release": "2010-08-10",
+    "alias": "Galio"
+  },
+  {
+    "key": 4,
+    "world": "Bilgewater",
+    "release": "2009-02-21",
+    "alias": "TwistedFate"
+  },
+  {
+    "key": 5,
+    "world": "Demacia",
+    "release": "2010-07-13",
+    "alias": "XinZhao"
+  },
+  {
+    "key": 6,
+    "world": "Zaun",
+    "release": "2010-08-24",
+    "alias": "Urgot"
+  },
+  {
+    "key": 7,
+    "world": "Noxus",
+    "release": "2010-11-02",
+    "alias": "Leblanc"
+  },
+  {
+    "key": 8,
+    "world": "Noxus",
+    "release": "2010-07-27",
+    "alias": "Vladimir"
+  },
+  {
+    "key": 9,
+    "world": "Runeterra",
+    "release": "2009-02-21",
+    "alias": "FiddleSticks"
+  },
+  {
+    "key": 10,
+    "world": "Demacia",
+    "release": "2009-02-21",
+    "alias": "Kayle"
+  },
+  {
+    "key": 11,
+    "world": "Ionia",
+    "release": "2009-02-21",
+    "alias": "MasterYi"
+  },
+  {
+    "key": 12,
+    "world": "Runeterra",
+    "release": "2009-02-21",
+    "alias": "Alistar"
+  },
+  {
+    "key": 13,
+    "world": "Runeterra",
+    "release": "2009-02-21",
+    "alias": "Ryze"
+  },
+  {
+    "key": 14,
+    "world": "Noxus",
+    "release": "2009-02-21",
+    "alias": "Sion"
+  },
+  {
+    "key": 15,
+    "world": "Shurima",
+    "release": "2009-02-21",
+    "alias": "Sivir"
+  },
+  {
+    "key": 16,
+    "world": "Targon",
+    "release": "2009-02-21",
+    "alias": "Soraka"
+  },
+  {
+    "key": 17,
+    "world": "Bandle City",
+    "release": "2009-02-21",
+    "alias": "Teemo"
+  },
+  {
+    "key": 18,
+    "world": "Bandle City",
+    "release": "2009-02-21",
+    "alias": "Tristana"
+  },
+  {
+    "key": 19,
+    "world": "Zaun",
+    "release": "2009-02-21",
+    "alias": "Warwick"
+  },
+  {
+    "key": 20,
+    "world": "Freljord",
+    "release": "2009-02-21",
+    "alias": "Nunu"
+  },
+  {
+    "key": 21,
+    "world": "Bilgewater",
+    "release": "2010-09-08",
+    "alias": "MissFortune"
+  },
+  {
+    "key": 22,
+    "world": "Freljord",
+    "release": "2009-02-21",
+    "alias": "Ashe"
+  },
+  {
+    "key": 23,
+    "world": "Freljord",
+    "release": "2009-05-01",
+    "alias": "Tryndamere"
+  },
+  {
+    "key": 24,
+    "world": "Runeterra",
+    "release": "2009-02-21",
+    "alias": "Jax"
+  },
+  {
+    "key": 25,
+    "world": "Demacia",
+    "release": "2009-02-21",
+    "alias": "Morgana"
+  },
+  {
+    "key": 26,
+    "world": "Runeterra",
+    "release": "2009-04-18",
+    "alias": "Zilean"
+  },
+  {
+    "key": 27,
+    "world": "Zaun",
+    "release": "2009-04-18",
+    "alias": "Singed"
+  },
+  {
+    "key": 28,
+    "world": "Runeterra",
+    "release": "2009-05-01",
+    "alias": "Evelynn"
+  },
+  {
+    "key": 29,
+    "world": "Zaun",
+    "release": "2009-05-01",
+    "alias": "Twitch"
+  },
+  {
+    "key": 30,
+    "world": "Shadow Isles",
+    "release": "2009-06-12",
+    "alias": "Karthus"
+  },
+  {
+    "key": 31,
+    "world": "Void",
+    "release": "2009-06-26",
+    "alias": "Chogath"
+  },
+  {
+    "key": 32,
+    "world": "Shurima",
+    "release": "2009-06-26",
+    "alias": "Amumu"
+  },
+  {
+    "key": 33,
+    "world": "Shurima",
+    "release": "2009-07-10",
+    "alias": "Rammus"
+  },
+  {
+    "key": 34,
+    "world": "Freljord",
+    "release": "2009-07-10",
+    "alias": "Anivia"
+  },
+  {
+    "key": 35,
+    "world": "Runeterra",
+    "release": "2009-10-10",
+    "alias": "Shaco"
+  },
+  {
+    "key": 36,
+    "world": "Zaun",
+    "release": "2009-09-02",
+    "alias": "DrMundo"
+  },
+  {
+    "key": 37,
+    "world": "Demacia",
+    "release": "2010-09-21",
+    "alias": "Sona"
+  },
+  {
+    "key": 38,
+    "world": "Void",
+    "release": "2009-06-12",
+    "alias": "Kassadin"
+  },
+  {
+    "key": 39,
+    "world": "Ionia",
+    "release": "2010-11-16",
+    "alias": "Irelia"
+  },
+  {
+    "key": 40,
+    "world": "Zaun",
+    "release": "2009-09-02",
+    "alias": "Janna"
+  },
+  {
+    "key": 41,
+    "world": "Bilgewater",
+    "release": "2009-08-19",
+    "alias": "Gangplank"
+  },
+  {
+    "key": 42,
+    "world": "Bandle City",
+    "release": "2009-09-19",
+    "alias": "Corki"
+  },
+  {
+    "key": 43,
+    "world": "Ionia",
+    "release": "2011-02-01",
+    "alias": "Karma"
+  },
+  {
+    "key": 44,
+    "world": "Targon",
+    "release": "2009-08-19",
+    "alias": "Taric"
+  },
+  {
+    "key": 45,
+    "world": "Bandle City",
+    "release": "2009-07-24",
+    "alias": "Veigar"
+  },
+  {
+    "key": 48,
+    "world": "Freljord",
+    "release": "2010-12-01",
+    "alias": "Trundle"
+  },
+  {
+    "key": 50,
+    "world": "Noxus",
+    "release": "2010-10-05",
+    "alias": "Swain"
+  },
+  {
+    "key": 51,
+    "world": "Piltover",
+    "release": "2011-01-04",
+    "alias": "Caitlyn"
+  },
+  {
+    "key": 53,
+    "world": "Zaun",
+    "release": "2009-09-02",
+    "alias": "Blitzcrank"
+  },
+  {
+    "key": 54,
+    "world": "Ixtal",
+    "release": "2009-09-02",
+    "alias": "Malphite"
+  },
+  {
+    "key": 55,
+    "world": "Noxus",
+    "release": "2009-09-19",
+    "alias": "Katarina"
+  },
+  {
+    "key": 56,
+    "world": "Runeterra",
+    "release": "2011-03-15",
+    "alias": "Nocturne"
+  },
+  {
+    "key": 57,
+    "world": "Shadow Isles",
+    "release": "2011-02-16",
+    "alias": "Maokai"
+  },
+  {
+    "key": 58,
+    "world": "Shurima",
+    "release": "2011-01-18",
+    "alias": "Renekton"
+  },
+  {
+    "key": 59,
+    "world": "Demacia",
+    "release": "2011-03-01",
+    "alias": "JarvanIV"
+  },
+  {
+    "key": 60,
+    "world": "Shadow Isles",
+    "release": "2012-10-26",
+    "alias": "Elise"
+  },
+  {
+    "key": 61,
+    "world": "Piltover",
+    "release": "2011-06-01",
+    "alias": "Orianna"
+  },
+  {
+    "key": 62,
+    "world": "Ionia",
+    "release": "2011-07-26",
+    "alias": "MonkeyKing"
+  },
+  {
+    "key": 63,
+    "world": "Runeterra",
+    "release": "2011-04-12",
+    "alias": "Brand"
+  },
+  {
+    "key": 64,
+    "world": "Ionia",
+    "release": "2011-04-01",
+    "alias": "LeeSin"
+  },
+  {
+    "key": 67,
+    "world": "Demacia",
+    "release": "2011-05-10",
+    "alias": "Vayne"
+  },
+  {
+    "key": 68,
+    "world": "Bandle City",
+    "release": "2011-04-26",
+    "alias": "Rumble"
+  },
+  {
+    "key": 69,
+    "world": "Noxus",
+    "release": "2010-12-14",
+    "alias": "Cassiopeia"
+  },
+  {
+    "key": 72,
+    "world": "Shurima",
+    "release": "2011-08-09",
+    "alias": "Skarner"
+  },
+  {
+    "key": 74,
+    "world": "Piltover",
+    "release": "2009-10-10",
+    "alias": "Heimerdinger"
+  },
+  {
+    "key": 75,
+    "world": "Shurima",
+    "release": "2009-10-01",
+    "alias": "Nasus"
+  },
+  {
+    "key": 76,
+    "world": "Ixtal",
+    "release": "2009-12-17",
+    "alias": "Nidalee"
+  },
+  {
+    "key": 77,
+    "world": "Freljord",
+    "release": "2009-12-02",
+    "alias": "Udyr"
+  },
+  {
+    "key": 78,
+    "world": "Demacia",
+    "release": "2010-01-13",
+    "alias": "Poppy"
+  },
+  {
+    "key": 79,
+    "world": "Freljord",
+    "release": "2010-02-02",
+    "alias": "Gragas"
+  },
+  {
+    "key": 80,
+    "world": "Targon",
+    "release": "2010-02-02",
+    "alias": "Pantheon"
+  },
+  {
+    "key": 81,
+    "world": "Piltover",
+    "release": "2010-03-16",
+    "alias": "Ezreal"
+  },
+  {
+    "key": 82,
+    "world": "Noxus",
+    "release": "2010-02-24",
+    "alias": "Mordekaiser"
+  },
+  {
+    "key": 83,
+    "world": "Shadow Isles",
+    "release": "2011-06-22",
+    "alias": "Yorick"
+  },
+  {
+    "key": 84,
+    "world": "Ionia",
+    "release": "2010-05-11",
+    "alias": "Akali"
+  },
+  {
+    "key": 85,
+    "world": "Ionia",
+    "release": "2010-04-08",
+    "alias": "Kennen"
+  },
+  {
+    "key": 86,
+    "world": "Demacia",
+    "release": "2010-04-27",
+    "alias": "Garen"
+  },
+  {
+    "key": 89,
+    "world": "Targon",
+    "release": "2011-07-13",
+    "alias": "Leona"
+  },
+  {
+    "key": 90,
+    "world": "Void",
+    "release": "2010-06-01",
+    "alias": "Malzahar"
+  },
+  {
+    "key": 91,
+    "world": "Noxus",
+    "release": "2011-08-24",
+    "alias": "Talon"
+  },
+  {
+    "key": 92,
+    "world": "Runeterra",
+    "release": "2011-09-14",
+    "alias": "Riven"
+  },
+  {
+    "key": 96,
+    "world": "Void",
+    "release": "2010-06-24",
+    "alias": "KogMaw"
+  },
+  {
+    "key": 98,
+    "world": "Ionia",
+    "release": "2010-03-24",
+    "alias": "Shen"
+  },
+  {
+    "key": 99,
+    "world": "Demacia",
+    "release": "2010-10-19",
+    "alias": "Lux"
+  },
+  {
+    "key": 101,
+    "world": "Shurima",
+    "release": "2011-10-05",
+    "alias": "Xerath"
+  },
+  {
+    "key": 102,
+    "world": "Demacia",
+    "release": "2011-11-01",
+    "alias": "Shyvana"
+  },
+  {
+    "key": 103,
+    "world": "Ionia",
+    "release": "2011-12-14",
+    "alias": "Ahri"
+  },
+  {
+    "key": 104,
+    "world": "Bilgewater",
+    "release": "2011-10-19",
+    "alias": "Graves"
+  },
+  {
+    "key": 105,
+    "world": "Bilgewater",
+    "release": "2011-11-15",
+    "alias": "Fizz"
+  },
+  {
+    "key": 106,
+    "world": "Freljord",
+    "release": "2011-11-29",
+    "alias": "Volibear"
+  },
+  {
+    "key": 107,
+    "world": "Ixtal",
+    "release": "2012-08-21",
+    "alias": "Rengar"
+  },
+  {
+    "key": 110,
+    "world": "Ionia",
+    "release": "2012-05-08",
+    "alias": "Varus"
+  },
+  {
+    "key": 111,
+    "world": "Bilgewater",
+    "release": "2012-02-14",
+    "alias": "Nautilus"
+  },
+  {
+    "key": 112,
+    "world": "Zaun",
+    "release": "2011-12-29",
+    "alias": "Viktor"
+  },
+  {
+    "key": 113,
+    "world": "Freljord",
+    "release": "2012-01-17",
+    "alias": "Sejuani"
+  },
+  {
+    "key": 114,
+    "world": "Demacia",
+    "release": "2012-02-29",
+    "alias": "Fiora"
+  },
+  {
+    "key": 115,
+    "world": "Zaun",
+    "release": "2012-02-01",
+    "alias": "Ziggs"
+  },
+  {
+    "key": 117,
+    "world": "Bandle City",
+    "release": "2012-03-20",
+    "alias": "Lulu"
+  },
+  {
+    "key": 119,
+    "world": "Noxus",
+    "release": "2012-06-06",
+    "alias": "Draven"
+  },
+  {
+    "key": 120,
+    "world": "Shadow Isles",
+    "release": "2012-04-18",
+    "alias": "Hecarim"
+  },
+  {
+    "key": 121,
+    "world": "Void",
+    "release": "2012-09-27",
+    "alias": "Khazix"
+  },
+  {
+    "key": 122,
+    "world": "Noxus",
+    "release": "2012-05-23",
+    "alias": "Darius"
+  },
+  {
+    "key": 126,
+    "world": "Piltover",
+    "release": "2012-07-07",
+    "alias": "Jayce"
+  },
+  {
+    "key": 127,
+    "world": "Freljord",
+    "release": "2013-04-30",
+    "alias": "Lissandra"
+  },
+  {
+    "key": 131,
+    "world": "Targon",
+    "release": "2012-08-07",
+    "alias": "Diana"
+  },
+  {
+    "key": 133,
+    "world": "Demacia",
+    "release": "2013-03-01",
+    "alias": "Quinn"
+  },
+  {
+    "key": 134,
+    "world": "Ionia",
+    "release": "2021-09-13",
+    "alias": "Syndra"
+  },
+  {
+    "key": 136,
+    "world": "Runeterra",
+    "release": "2016-03-24",
+    "alias": "AurelionSol"
+  },
+  {
+    "key": 141,
+    "world": "Ionia",
+    "release": "2017-07-12",
+    "alias": "Kayn"
+  },
+  {
+    "key": 142,
+    "world": "Targon",
+    "release": "2017-11-21",
+    "alias": "Zoe"
+  },
+  {
+    "key": 143,
+    "world": "Ixtal",
+    "release": "2012-07-24",
+    "alias": "Zyra"
+  },
+  {
+    "key": 145,
+    "world": "Void",
+    "release": "2018-03-07",
+    "alias": "Kaisa"
+  },
+  {
+    "key": 147,
+    "world": "Piltover",
+    "release": "2020-10-29",
+    "alias": "Seraphine"
+  },
+  {
+    "key": 150,
+    "world": "Freljord",
+    "release": "2014-08-14",
+    "alias": "Gnar"
+  },
+  {
+    "key": 154,
+    "world": "Zaun",
+    "release": "2013-03-29",
+    "alias": "Zac"
+  },
+  {
+    "key": 157,
+    "world": "Ionia",
+    "release": "2013-12-13",
+    "alias": "Yasuo"
+  },
+  {
+    "key": 161,
+    "world": "Bandle City",
+    "release": "2014-02-27",
+    "alias": "Velkoz"
+  },
+  {
+    "key": 163,
+    "world": "Shurima",
+    "release": "2016-05-18",
+    "alias": "Taliyah"
+  },
+  {
+    "key": 164,
+    "world": "Piltover",
+    "release": "2016-12-07",
+    "alias": "Camille"
+  },
+  {
+    "key": 166,
+    "world": "Shurima",
+    "release": "2021-07-22",
+    "alias": "Akshan"
+  },
+  {
+    "key": 200,
+    "world": "Void",
+    "release": "2022-06-09",
+    "alias": "Belveth"
+  },
+  {
+    "key": 201,
+    "world": "Freljord",
+    "release": "2014-05-12",
+    "alias": "Braum"
+  },
+  {
+    "key": 202,
+    "world": "Ionia",
+    "release": "2016-02-01",
+    "alias": "Jhin"
+  },
+  {
+    "key": 203,
+    "world": "Runeterra",
+    "release": "2015-10-14",
+    "alias": "Kindred"
+  },
+  {
+    "key": 221,
+    "world": "Zaun",
+    "release": "2022-01-20",
+    "alias": "Zeri"
+  },
+  {
+    "key": 222,
+    "world": "Zaun",
+    "release": "2013-10-10",
+    "alias": "Jinx"
+  },
+  {
+    "key": 223,
+    "world": "Runeterra",
+    "release": "2015-07-09",
+    "alias": "TahmKench"
+  },
+  {
+    "key": 233,
+    "world": "Noxus",
+    "release": "2023-09-14",
+    "alias": "Briar"
+  },
+  {
+    "key": 234,
+    "world": "Shadow Isles",
+    "release": "2021-01-21",
+    "alias": "Viego"
+  },
+  {
+    "key": 235,
+    "world": "Runeterra",
+    "release": "2019-11-10",
+    "alias": "Senna"
+  },
+  {
+    "key": 236,
+    "world": "Runeterra",
+    "release": "2013-08-22",
+    "alias": "Lucian"
+  },
+  {
+    "key": 238,
+    "world": "Ionia",
+    "release": "2012-11-13",
+    "alias": "Zed"
+  },
+  {
+    "key": 240,
+    "world": "Noxus",
+    "release": "2016-08-10",
+    "alias": "Kled"
+  },
+  {
+    "key": 245,
+    "world": "Zaun",
+    "release": "2015-05-29",
+    "alias": "Ekko"
+  },
+  {
+    "key": 246,
+    "world": "Ixtal",
+    "release": "2019-06-28",
+    "alias": "Qiyana"
+  },
+  {
+    "key": 254,
+    "world": "Piltover",
+    "release": "2012-12-19",
+    "alias": "Vi"
+  },
+  {
+    "key": 266,
+    "world": "Runeterra",
+    "release": "2013-06-13",
+    "alias": "Aatrox"
+  },
+  {
+    "key": 267,
+    "world": "Runeterra",
+    "release": "2012-12-07",
+    "alias": "Nami"
+  },
+  {
+    "key": 268,
+    "world": "Shurima",
+    "release": "2014-09-16",
+    "alias": "Azir"
+  },
+  {
+    "key": 350,
+    "world": "Bandle City",
+    "release": "2019-05-14",
+    "alias": "Yuumi"
+  },
+  {
+    "key": 360,
+    "world": "Noxus",
+    "release": "2020-09-21",
+    "alias": "Samira"
+  },
+  {
+    "key": 412,
+    "world": "Shadow Isles",
+    "release": "2013-01-23",
+    "alias": "Thresh"
+  },
+  {
+    "key": 420,
+    "world": "Ionia",
+    "release": "2015-11-24",
+    "alias": "Illaoi"
+  },
+  {
+    "key": 421,
+    "world": "Void",
+    "release": "2014-12-11",
+    "alias": "RekSai"
+  },
+  {
+    "key": 427,
+    "world": "Ionia",
+    "release": "2016-10-05",
+    "alias": "Ivern"
+  },
+  {
+    "key": 429,
+    "world": "Shadow Isles",
+    "release": "2014-11-20",
+    "alias": "Kalista"
+  },
+  {
+    "key": 432,
+    "world": "Runeterra",
+    "release": "2015-03-12",
+    "alias": "Bard"
+  },
+  {
+    "key": 497,
+    "world": "Ionia",
+    "release": "2017-04-19",
+    "alias": "Rakan"
+  },
+  {
+    "key": 498,
+    "world": "Ionia",
+    "release": "2017-04-19",
+    "alias": "Xayah"
+  },
+  {
+    "key": 516,
+    "world": "Freljord",
+    "release": "2017-08-23",
+    "alias": "Ornn"
+  },
+  {
+    "key": 517,
+    "world": "Freljord",
+    "release": "2019-01-25",
+    "alias": "Sylas"
+  },
+  {
+    "key": 518,
+    "world": "Ixtal",
+    "release": "2018-12-05",
+    "alias": "Neeko"
+  },
+  {
+    "key": 523,
+    "world": "Targon",
+    "release": "2019-12-11",
+    "alias": "Aphelios"
+  },
+  {
+    "key": 526,
+    "world": "Noxus",
+    "release": "2020-12-10",
+    "alias": "Rell"
+  },
+  {
+    "key": 555,
+    "world": "Bilgewater",
+    "release": "2018-05-31",
+    "alias": "Pyke"
+  },
+  {
+    "key": 711,
+    "world": "Shadow Isles",
+    "release": "2021-09-23",
+    "alias": "Vex"
+  },
+  {
+    "key": 777,
+    "world": "Ionia",
+    "release": "2020-08-06",
+    "alias": "Yone"
+  },
+  {
+    "key": 875,
+    "world": "Ionia",
+    "release": "2020-01-14",
+    "alias": "Sett"
+  },
+  {
+    "key": 876,
+    "world": "Ionia",
+    "release": "2020-07-22",
+    "alias": "Lillia"
+  },
+  {
+    "key": 800,
+    "world": "Noxus",
+    "release": "2025-01-23",
+    "alias": "Mel"
+  },
+  {
+    "key": 887,
+    "world": "Shadow Isles",
+    "release": "2021-04-15",
+    "alias": "Gwen"
+  },
+  {
+    "key": 888,
+    "world": "Zaun",
+    "release": "2022-02-17",
+    "alias": "Renata"
+  },
+  {
+    "key": 893,
+    "world": "Freljord",
+    "release": "2024-07-17",
+    "alias": "Aurora"
+  },
+  {
+    "key": 895,
+    "world": "Bilgewater",
+    "release": "2022-07-13",
+    "alias": "Nilah"
+  },
+  {
+    "key": 897,
+    "world": "Shurima",
+    "release": "2022-11-03",
+    "alias": "KSante"
+  },
+  {
+    "key": 901,
+    "world": "Runeterra",
+    "release": "2024-01-31",
+    "alias": "Smolder"
+  },
+  {
+    "key": 902,
+    "world": "Ixtal",
+    "release": "2023-03-22",
+    "alias": "Milio"
+  },
+  {
+    "key": 910,
+    "world": "Ionia",
+    "release": "2023-12-06",
+    "alias": "Hwei"
+  },
+  {
+    "key": 950,
+    "world": "Shurima",
+    "release": "2023-07-20",
+    "alias": "Naafiri"
   }
 ]
