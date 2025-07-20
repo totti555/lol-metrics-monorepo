@@ -3,7 +3,7 @@ import { CDragonSkin, CDragonSkinsResponse } from "@/types/cdragon";
 
 export const fetchSkins = async (): Promise<CDragonSkin[]> => {
   const { data: skinData } = await axios.get<CDragonSkinsResponse>(
-    "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/skins.json"
+    `${process.env.COMMUNITY_DRAGON_API_URL}/v1/skins.json"`
   );
 
   return Object.values(skinData).map((skin) => ({
