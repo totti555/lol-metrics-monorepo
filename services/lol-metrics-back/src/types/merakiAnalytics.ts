@@ -8,7 +8,7 @@ export interface MAChampion {
   resource: string;
   attackType: "RANGED" | "MELEE" | string;
   adaptiveType: "MAGIC_DAMAGE" | "PHYSICAL_DAMAGE" | "TRUE_DAMAGE" | string;
-  stats: Record<keyof MAStatBlock, MAStat>;
+  stats?: Record<keyof MAStatBlock, MAStat>;
   positions: string[];
   roles: string[];
   attributeRatings: MAAttributeRatings;

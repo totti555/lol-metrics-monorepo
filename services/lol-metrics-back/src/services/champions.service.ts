@@ -9,13 +9,10 @@ import {
 import { components } from "@/types/openapi";
 import { toCDragonUrl, toCDragonUrlVideo } from "@/utils/cdragon";
 import axios from "axios";
-import {
-  fetchSkins,
-  findBaseSkinForChampion,
-  getSkinPrice,
-} from "@/services/skins.service";
+import { fetchSkins, findBaseSkinForChampion } from "@/services/skins.service";
 import championsSupplementaryData from "@/data/champions.json";
 import { ChampionSupplementaryData } from "@/types/supplementaryDatas";
+import { MAChampion } from "@/types/merakiAnalytics";
 
 type Champion = components["schemas"]["Champion"];
 type ChampionDetails = components["schemas"]["ChampionDetails"];
@@ -67,14 +64,13 @@ export const getChampionById = async (id: string): Promise<ChampionDetails> => {
 
   // SKINS
   const skins = data.skins;
-  const skinsPriceData = await getSkinPrice(data.alias);
+  const championDetailFromMA = await getChampionFromMA(data.alias);
 
   const pricedSkins: components["schemas"]["Skin"][] = skins.map(
     (skin: CdragonSkinSummary) => {
-      const matchingSkin = skinsPriceData.skins.find(
+      const matchingSkin = championDetailFromMA.skins.find(
         (s: any) => s.id === skin.id
       );
-      console.log(skin.uncenteredSplashPath);
       return {
         id: skin.id,
         name: skin.name,
@@ -138,4 +134,10 @@ const spellByKey = (
     description: spell.description,
     video: toCDragonUrlVideo(spell.abilityVideoPath),
   };
+};
+
+export const getChampionFromMA = async (champAlias: string) => {
+  const merakianalyticsUrl = `${process.env.MA_URL}/resources/latest/en-US/champions/${champAlias}.json`;
+  const { data } = await axios.get<MAChampion>(merakianalyticsUrl);
+  return data;
 };

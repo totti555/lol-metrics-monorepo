@@ -29,15 +29,15 @@ export interface CdragonChampion {
   shortBio: string;
   tacticalInfo: CdragonTacticalInfo;
   playstyleInfo: CdragonPlaystyleInfo;
-  championTagInfo: CdragonChampionTagInfo;
+  championTagInfo?: CdragonChampionTagInfo;
   squarePortraitPath: string;
-  stingerSfxPath: string;
-  chooseVoPath: string;
-  banVoPath: string;
+  stingerSfxPath?: string;
+  chooseVoPath?: string;
+  banVoPath?: string;
   roles: Role[];
-  recommendedItemDefaults: any[];
+  recommendedItemDefaults?: any[];
   skins: CdragonSkinSummary[];
-  passive: CdragonAbility;
+  passive?: CdragonAbility;
   spells: CdragonSpell[];
 }
 

@@ -20,9 +20,3 @@ export const findBaseSkinForChampion = (
 ): CDragonSkin | undefined => {
   return skins.find((skin) => skin.isBase && skin.id === championId * 1000);
 };
-
-export const getSkinPrice = async (champAlias: string) => {
-  const merakianalyticsUrl = `${process.env.MA_URL}/resources/latest/en-US/champions/${champAlias}.json`;
-  const { data } = await axios.get(merakianalyticsUrl);
-  return data;
-};
