@@ -1,6 +1,9 @@
 import { Router } from "express";
 import { health } from "./controllers/health.controller";
-import { getChampions } from "./controllers/champions.controller";
+import {
+  getChampionByIdController,
+  getChampionsController,
+} from "./controllers/champions.controller";
 // IMPORT ROUTER
 
 const router = Router();
@@ -11,10 +14,10 @@ router.get("/health", health);
 // CHAMPIONS
 
 // Champions list
-router.get("/champions", getChampions);
+router.get("/champions", getChampionsController);
 
 // Champion
-// router.get('/champions/:id', getChampionById);
+router.get("/champions/:id", getChampionByIdController);
 
 // =======================================
 

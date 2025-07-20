@@ -80,7 +80,7 @@ export interface components {
             clientPortrait?: string;
             roles: components["schemas"]["Role"][];
             /**
-             * @description Release date oh the champion
+             * @description Release date of the champion
              * @example 2025-06-21
              */
             releaseDate?: string;
@@ -90,8 +90,128 @@ export interface components {
              */
             world?: string;
         };
+        ChampionDetails: {
+            /**
+             * @description Unique identifier for the champion
+             * @example 1
+             */
+            id: string;
+            /**
+             * @description Name of the champion
+             * @example Ahri
+             */
+            name: string;
+            /**
+             * @description Technical alias for asset resolution
+             * @example Ahri
+             */
+            alias: string;
+            /** @description Champion subtitle displayed on lists */
+            description: string;
+            /** @description Long biography used on champion detail page */
+            bio: string;
+            /**
+             * @description Release date of the champion
+             * @example 2025-06-21
+             */
+            releaseDate?: string;
+            /**
+             * @description URL to square icon portrait
+             * @example https://cdn.communitydragon.org/latest/lol-game-data/assets/v1/champion-icons/103.png
+             */
+            squarePortrait: string;
+            /**
+             * @description The region or origin the champion belongs to in the League of Legends universe
+             * @example Piltover
+             */
+            world?: string;
+            tacticalInfo: {
+                /**
+                 * @description Indicates whether the champion is melee or ranged
+                 * @enum {string}
+                 */
+                attackType?: "melee" | "ranged";
+                /**
+                 * @description Main type of damage
+                 * @enum {string}
+                 */
+                damageType?: "kPhysical" | "kMagic" | "kMixed";
+            };
+            playstyleInfo?: {
+                /** @description Damage level from 1 to 3 */
+                damage?: number;
+                /** @description Durability level from 1 to 3 */
+                durability?: number;
+                /** @description Crowd control potential from 1 to 3 */
+                crowdControl?: number;
+                /** @description Mobility level from 1 to 3 */
+                mobility?: number;
+                /** @description Utility level from 1 to 3 */
+                utility?: number;
+            };
+            /** @description List of the different skins */
+            skins: components["schemas"]["Skin"][];
+            roles: components["schemas"]["Role"][];
+            spells: {
+                P?: components["schemas"]["Spell"];
+                Q?: components["schemas"]["Spell"];
+                W?: components["schemas"]["Spell"];
+                E?: components["schemas"]["Spell"];
+                R?: components["schemas"]["Spell"];
+            };
+        };
         /** @enum {string} */
         Role: "Top" | "Jungle" | "Mid" | "Bottom" | "Support";
+        Skin: {
+            /**
+             * @description Unique ID of the skin
+             * @example 1000
+             */
+            id: number;
+            /**
+             * @description Display name of the skin
+             * @example Annie
+             */
+            name: string;
+            /**
+             * @description Indicates if this is the base/default skin
+             * @example true
+             */
+            isBase: boolean;
+            /**
+             * @description Path to the uncentered splash image
+             * @example https://cdn.communitydragon.org/latest/assets/characters/annie/skins/skin01/images/annie_splash_uncentered_1.jpg
+             */
+            image: string;
+            /**
+             * @description Rarity of the skin
+             * @example kLegendary
+             */
+            rarity: string;
+            price?: number | string;
+        };
+        Spell: {
+            /**
+             * @description Name of the spell
+             * @example Disintegrate
+             */
+            name: string;
+            /**
+             * @description Path to the spell's icon image
+             * @example /lol-game-data/assets/ASSETS/Characters/Annie/HUD/Icons2D/Annie_Q.png
+             */
+            icon: string;
+            /**
+             * @description Path to the spell's preview video
+             * @example champion-abilities/0001/ability_0001_Q1.webm
+             */
+            video: string;
+            /**
+             * @description Text description of the ability
+             * @example Annie hurls a Mana infused fireball, dealing damage and refunding the Mana cost if it destroys the target.
+             */
+            description: string;
+        };
     };
     responses: never;
     parameters: never;

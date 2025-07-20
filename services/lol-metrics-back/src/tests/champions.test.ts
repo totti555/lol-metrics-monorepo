@@ -82,8 +82,7 @@ describe("getAllChampions", () => {
         name: "Akali",
         alias: "Akali",
         description: "The Rogue Assassin",
-        squarePortrait:
-          "https://cdn.communitydragon.org/latest/lol-game-data/assets/v1/champion-icons/84.png",
+        squarePortrait: "https://api.cdragon.test/v1/champion-icons/84.png",
         clientPortrait: undefined,
         roles: ["Mid"],
         releaseDate: "2010-06-09",

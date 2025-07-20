@@ -3,7 +3,7 @@ import { CDragonSkin, CDragonSkinsResponse } from "@/types/cdragon";
 
 export const fetchSkins = async (): Promise<CDragonSkin[]> => {
   const { data: skinData } = await axios.get<CDragonSkinsResponse>(
-    "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/skins.json"
+    `${process.env.COMMUNITY_DRAGON_API_URL}/v1/skins.json"`
   );
 
   return Object.values(skinData).map((skin) => ({
@@ -19,4 +19,10 @@ export const findBaseSkinForChampion = (
   skins: CDragonSkin[]
 ): CDragonSkin | undefined => {
   return skins.find((skin) => skin.isBase && skin.id === championId * 1000);
+};
+
+export const getSkinPrice = async (champAlias: string) => {
+  const merakianalyticsUrl = `${process.env.MA_URL}/resources/latest/en-US/champions/${champAlias}.json`;
+  const { data } = await axios.get(merakianalyticsUrl);
+  return data;
 };

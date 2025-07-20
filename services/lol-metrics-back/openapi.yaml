@@ -58,7 +58,7 @@ components:
             $ref: "#/components/schemas/Role"
         releaseDate:
           type: string
-          description: Release date oh the champion
+          description: Release date of the champion
           example: "2025-06-21"
         world:
           type: string
@@ -86,6 +86,103 @@ components:
         - description
         - squarePortrait
         - roles
+
+    ChampionDetails:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the champion
+          example: "1"
+        name:
+          type: string
+          description: Name of the champion
+          example: "Ahri"
+        alias:
+          type: string
+          description: Technical alias for asset resolution
+          example: "Ahri"
+        description:
+          type: string
+          description: Champion subtitle displayed on lists
+        bio:
+          type: string
+          description: Long biography used on champion detail page
+        releaseDate:
+          type: string
+          description: Release date of the champion
+          example: "2025-06-21"
+        squarePortrait:
+          type: string
+          description: URL to square icon portrait
+          example: https://cdn.communitydragon.org/latest/lol-game-data/assets/v1/champion-icons/103.png
+        world:
+          type: string
+          description: The region or origin the champion belongs to in the League of Legends universe
+          example: "Piltover"
+        tacticalInfo:
+          type: object
+          properties:
+            attackType:
+              type: string
+              enum: [melee, ranged]
+              description: Indicates whether the champion is melee or ranged
+            damageType:
+              type: string
+              enum: [kPhysical, kMagic, kMixed]
+              description: Main type of damage
+        playstyleInfo:
+          type: object
+          properties:
+            damage:
+              type: integer
+              description: Damage level from 1 to 3
+            durability:
+              type: integer
+              description: Durability level from 1 to 3
+            crowdControl:
+              type: integer
+              description: Crowd control potential from 1 to 3
+            mobility:
+              type: integer
+              description: Mobility level from 1 to 3
+            utility:
+              type: integer
+              description: Utility level from 1 to 3
+        skins:
+          type: array
+          description: List of the different skins
+          items:
+            $ref: "#/components/schemas/Skin"
+        roles:
+          type: array
+          items:
+            $ref: "#/components/schemas/Role"
+        spells:
+          type: object
+          properties:
+            P:
+              $ref: "#/components/schemas/Spell"
+            Q:
+              $ref: "#/components/schemas/Spell"
+            W:
+              $ref: "#/components/schemas/Spell"
+            E:
+              $ref: "#/components/schemas/Spell"
+            R:
+              $ref: "#/components/schemas/Spell"
+      required:
+        - id
+        - name
+        - alias
+        - description
+        - squarePortrait
+        - tacticalInfo
+        - roles
+        - spells
+        - skins
+        - bio
+
     Role:
       type: string
       enum:
@@ -94,3 +191,66 @@ components:
         - Mid
         - Bottom
         - Support
+
+    Skin:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique ID of the skin
+          example: 1000
+        name:
+          type: string
+          description: Display name of the skin
+          example: "Annie"
+        isBase:
+          type: boolean
+          description: Indicates if this is the base/default skin
+          example: true
+        image:
+          type: string
+          description: Path to the uncentered splash image
+          example: "https://cdn.communitydragon.org/latest/assets/characters/annie/skins/skin01/images/annie_splash_uncentered_1.jpg"
+        rarity:
+          type: string
+          description: Rarity of the skin
+          example: "kLegendary"
+        price:
+          oneOf:
+            - type: integer
+              description: Price of the skin in RP or BE (if numeric)
+              example: 1350
+            - type: string
+              description: Special label for skins that can't be bought with RP (e.g. "Special", "Limited")
+              example: "Special"
+      required:
+        - id
+        - name
+        - isBase
+        - image
+        - rarity
+
+    Spell:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the spell
+          example: "Disintegrate"
+        icon:
+          type: string
+          description: Path to the spell's icon image
+          example: "/lol-game-data/assets/ASSETS/Characters/Annie/HUD/Icons2D/Annie_Q.png"
+        video:
+          type: string
+          description: Path to the spell's preview video
+          example: "champion-abilities/0001/ability_0001_Q1.webm"
+        description:
+          type: string
+          description: Text description of the ability
+          example: "Annie hurls a Mana infused fireball, dealing damage and refunding the Mana cost if it destroys the target."
+      required:
+        - name
+        - icon
+        - video
+        - description
