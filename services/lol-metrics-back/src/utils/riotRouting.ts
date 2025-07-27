@@ -83,3 +83,21 @@ export function getAccountApiUrl(platformId: RiotPlatformId): string {
 export function getPlatformApiUrl(platformId: RiotPlatformId): string {
   return RIOT_PLATFORM_BASE_URLS[platformId];
 }
+
+// TODO : Check a better way to normalize roles
+export function normalizeRole(role: string): string {
+  switch (role) {
+    case "MIDDLE":
+      return "Mid";
+    case "TOP":
+      return "Top";
+    case "SUPPORT":
+      return "Support";
+    case "BOTTOM":
+      return "Bottom";
+    case "JUNGLE":
+      return "Jungle";
+    default:
+      return role;
+  }
+}

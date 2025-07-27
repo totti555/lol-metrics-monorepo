@@ -4,7 +4,7 @@ import {
   getChampionByIdController,
   getChampionsController,
 } from "./controllers/champions.controller";
-import { searchSummonersController } from "./controllers/summoner.controller";
+import { searchSummonerController } from "./controllers/summoner.controller";
 // IMPORT ROUTER
 
 const router = Router();
@@ -24,7 +24,7 @@ router.get("/champions/:id", getChampionByIdController);
 
 // SUMMONER
 // Summoners list (with queryParam)
-router.get("/summoners", searchSummonersController);
+router.get("/summoner", searchSummonerController);
 
 // Summoner (queryParam moreDetails -->  rank + mastery)
 // router.get('/summoners/:summonerName', searchSummonerByName )
