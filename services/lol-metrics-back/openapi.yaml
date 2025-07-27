@@ -22,6 +22,38 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Champion"
+  /summoner:
+    get:
+      summary: Get summoner info with last matches
+      parameters:
+        - in: query
+          name: name
+          schema:
+            type: string
+          required: true
+          description: Player name
+          example: "TottiSkyZz"
+        - in: query
+          name: tagLine
+          schema:
+            type: string
+          required: true
+          description: Player tag line
+          example: "8256"
+        - in: query
+          name: platformId
+          schema:
+            type: string
+          required: true
+          description: Player platform ID
+          example: "EUW1"
+      responses:
+        "200":
+          description: Summoner info with last matches
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Summoner"
 
 components:
   schemas:
@@ -254,3 +286,97 @@ components:
         - icon
         - video
         - description
+
+    Summoner:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "TottiSkyZz"
+        tagLine:
+          type: string
+          example: "8256"
+        profileIconId:
+          type: integer
+          example: 488
+        revisionDate:
+          type: integer
+          example: 1700000000000
+        summonerLevel:
+          type: integer
+          example: 30
+        lastMatches:
+          type: array
+          items:
+            $ref: "#/components/schemas/Match"
+      required:
+        - name
+        - tagLine
+        - profileIconId
+        - revisionDate
+        - summonerLevel
+
+    Match:
+      type: object
+      properties:
+        gameDuration:
+          type: integer
+          example: 1800
+          description: Duration of the match in seconds
+        gameCreation:
+          type: integer
+          example: 1670000000000
+          description: Unix timestamp (ms) of match creation
+        playerStats:
+          type: object
+          properties:
+            championId:
+              type: integer
+              example: 103
+            kills:
+              type: integer
+              example: 10
+            deaths:
+              type: integer
+              example: 2
+            assists:
+              type: integer
+              example: 5
+            cs:
+              type: integer
+              example: 200
+            win:
+              type: boolean
+              example: true
+            role:
+              type: string
+              items:
+                $ref: "#/components/schemas/Role"
+            items:
+              type: array
+              items:
+                type: integer
+              example: [1055, 3006, 3087, 3031, 3074, 3046]
+            killParticipation:
+              type: number
+              format: float
+              example: 0.75
+          required:
+            - championId
+            - kills
+            - deaths
+            - assists
+            - cs
+            - win
+            - role
+            - items
+        championIdsInMatch:
+          type: array
+          items:
+            type: integer
+          example: [103, 45, 240, 7, 12, 64, 99, 33, 55, 120]
+      required:
+        - gameDuration
+        - gameCreation
+        - playerStats
+        - championIdsInMatch

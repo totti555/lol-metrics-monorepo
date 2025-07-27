@@ -43,6 +43,58 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/summoner": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get summoner info with last matches */
+        get: {
+            parameters: {
+                query: {
+                    /**
+                     * @description Player name
+                     * @example TottiSkyZz
+                     */
+                    name: string;
+                    /**
+                     * @description Player tag line
+                     * @example 8256
+                     */
+                    tagLine: string;
+                    /**
+                     * @description Player platform ID
+                     * @example EUW1
+                     */
+                    platformId: string;
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Summoner info with last matches */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Summoner"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -211,6 +263,73 @@ export interface components {
              * @example Annie hurls a Mana infused fireball, dealing damage and refunding the Mana cost if it destroys the target.
              */
             description: string;
+        };
+        Summoner: {
+            /** @example TottiSkyZz */
+            name: string;
+            /** @example 8256 */
+            tagLine: string;
+            /** @example 488 */
+            profileIconId: number;
+            /** @example 1700000000000 */
+            revisionDate: number;
+            /** @example 30 */
+            summonerLevel: number;
+            lastMatches?: components["schemas"]["Match"][];
+        };
+        Match: {
+            /**
+             * @description Duration of the match in seconds
+             * @example 1800
+             */
+            gameDuration: number;
+            /**
+             * @description Unix timestamp (ms) of match creation
+             * @example 1670000000000
+             */
+            gameCreation: number;
+            playerStats: {
+                /** @example 103 */
+                championId: number;
+                /** @example 10 */
+                kills: number;
+                /** @example 2 */
+                deaths: number;
+                /** @example 5 */
+                assists: number;
+                /** @example 200 */
+                cs: number;
+                /** @example true */
+                win: boolean;
+                role: string;
+                /** @example [
+                 *       1055,
+                 *       3006,
+                 *       3087,
+                 *       3031,
+                 *       3074,
+                 *       3046
+                 *     ] */
+                items: number[];
+                /**
+                 * Format: float
+                 * @example 0.75
+                 */
+                killParticipation?: number;
+            };
+            /** @example [
+             *       103,
+             *       45,
+             *       240,
+             *       7,
+             *       12,
+             *       64,
+             *       99,
+             *       33,
+             *       55,
+             *       120
+             *     ] */
+            championIdsInMatch: number[];
         };
     };
     responses: never;

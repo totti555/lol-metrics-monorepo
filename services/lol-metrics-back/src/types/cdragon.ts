@@ -1,6 +1,4 @@
-import { components } from "./openapi";
-
-export type Role = components["schemas"]["Role"];
+import { Role } from "@/types";
 export type SpellKey = "q" | "w" | "e" | "r" | "p";
 
 export interface CDragonChampionSummary {
