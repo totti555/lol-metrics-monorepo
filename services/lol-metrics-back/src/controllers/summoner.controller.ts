@@ -23,13 +23,12 @@ export const searchSummonerController = async (req: Request, res: Response) => {
 
     const summoner = await riotIdToSummoner(name, tagLine, platformId);
     res.status(200).json(summoner);
-  } catch (error: any) {
-    console.log(error);
+  } catch (error: unknown) {
     handleRiotErrors(error, res);
   }
 };
 
-const handleRiotErrors = (error: any, res: Response) => {
+const handleRiotErrors = (error: unknown, res: Response) => {
   if (error instanceof UnauthorizedError) {
     res.status(401).json({ message: error.message });
   } else if (error instanceof ForbiddenError) {

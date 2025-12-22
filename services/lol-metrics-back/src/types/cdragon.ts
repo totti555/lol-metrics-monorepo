@@ -33,7 +33,7 @@ export interface CdragonChampion {
   chooseVoPath?: string;
   banVoPath?: string;
   roles: Role[];
-  recommendedItemDefaults?: any[];
+  recommendedItemDefaults?: any[]; // not managed
   skins: CdragonSkinSummary[];
   passive?: CdragonAbility;
   spells: CdragonSpell[];

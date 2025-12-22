@@ -103,10 +103,10 @@ export interface MASkin {
   sale: number;
   distribution: string | null;
   rarity: string;
-  chromas: any[];
+  chromas: any[]; // not managed
   lore: string;
   release: string;
-  set: any[];
+  set: any[]; // not managed
   splashPath: string;
   uncenteredSplashPath: string;
   tilePath: string;

@@ -61,7 +61,7 @@ export const riotIdToSummoner = async (
       ...summonerData.data,
       lastMatches,
     };
-  } catch (error: any) {
+  } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
       const status = error.response?.status;
 
@@ -117,11 +117,13 @@ export const getLastMatchesByPuuid = async (
     });
 
     return await Promise.all(matchDetailsPromises);
-  } catch (error: any) {
-    console.warn(
-      `Error fetching last matches for PUUID ${puuid}:`,
-      error.message
-    );
+  } catch (error: unknown) {
+    if (axios.isAxiosError(error)) {
+      console.warn(
+        `Error fetching last matches for PUUID ${puuid}:`,
+        error.message
+      );
+    }
     return [];
   }
 };

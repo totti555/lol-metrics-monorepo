@@ -30,9 +30,6 @@ describe("riotIdToSummoner", () => {
     jest
       .spyOn(require("@/utils/riotRouting"), "getPlatformApiUrl")
       .mockReturnValue(platformUrl);
-    jest
-      .spyOn(require("@/services/summoners.service"), "getLastMatchesByPuuid")
-      .mockResolvedValue([]);
   });
 
   it("returns summoner data on success", async () => {
@@ -60,22 +57,19 @@ describe("riotIdToSummoner", () => {
     );
   });
 
-  // TODO
   it("throws UnauthorizedError on 401", async () => {
-    const error = new AxiosError(
-      "err",
-      undefined,
-      { headers: new (require("axios").AxiosHeaders)() },
-      {},
-      { status: 401 } as any
-    );
-    mockedAxios.get.mockRejectedValue(error);
+    jest.spyOn(axios, "isAxiosError").mockReturnValue(true);
+    mockedAxios.get.mockRejectedValue({
+      response: { status: 401 },
+      message: "err",
+    });
     await expect(riotIdToSummoner("name", "tag", platformId)).rejects.toThrow(
       UnauthorizedError
     );
   });
 
   it("throws ForbiddenError on 403", async () => {
+    jest.spyOn(axios, "isAxiosError").mockReturnValue(true);
     mockedAxios.get.mockRejectedValue({
       response: { status: 403 },
       message: "err",
@@ -86,6 +80,7 @@ describe("riotIdToSummoner", () => {
   });
 
   it("throws NotFoundError on 404", async () => {
+    jest.spyOn(axios, "isAxiosError").mockReturnValue(true);
     mockedAxios.get.mockRejectedValue({
       response: { status: 404 },
       message: "err",
@@ -96,6 +91,7 @@ describe("riotIdToSummoner", () => {
   });
 
   it("throws RateLimitError on 429", async () => {
+    jest.spyOn(axios, "isAxiosError").mockReturnValue(true);
     mockedAxios.get.mockRejectedValue({
       response: { status: 429 },
       message: "err",

@@ -11,7 +11,7 @@ import axios from "axios";
 import { fetchSkins, findBaseSkinForChampion } from "@/services/skins.service";
 import championsSupplementaryData from "@/data/champions.json";
 import { ChampionSupplementaryData } from "@/types/supplementaryDatas";
-import { MAChampion } from "@/types/merakiAnalytics";
+import { MAChampion, MASkin } from "@/types/merakiAnalytics";
 import { Champion, ChampionDetails, Skin, Spell } from "@/types";
 
 export const getAllChampions = async (): Promise<Champion[]> => {
@@ -64,7 +64,7 @@ export const getChampionById = async (id: string): Promise<ChampionDetails> => {
 
   const pricedSkins: Skin[] = skins.map((skin: CdragonSkinSummary) => {
     const matchingSkin = championDetailFromMA.skins.find(
-      (s: any) => s.id === skin.id
+      (s: MASkin) => s.id === skin.id
     );
     return {
       id: skin.id,
