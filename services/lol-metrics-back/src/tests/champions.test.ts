@@ -4,7 +4,7 @@ import { fetchSkins } from "@/services/skins.service";
 import { mockChampions } from "./mocks/champions.mock";
 import { mockSkins } from "./mocks/skins.mock";
 import { mockChampionAnnie, mockMAChampionAnnie } from "./mocks/champion.mock";
-import { components } from "@/types/openapi";
+import { ChampionDetails } from "@/types";
 
 jest.mock("axios");
 jest.mock("@/services/skins.service", () => {
@@ -17,7 +17,6 @@ jest.mock("@/services/skins.service", () => {
 
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 const mockedFetchSkins = fetchSkins as jest.Mock;
-type ChampionDetails = components["schemas"]["ChampionDetails"];
 
 describe("Champions services", () => {
   const OLD_ENV = process.env;
