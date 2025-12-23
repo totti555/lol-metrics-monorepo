@@ -1,6 +1,4 @@
-import { components } from "./openapi";
-
-export type Role = components["schemas"]["Role"];
+import { Role } from "@/types";
 export type SpellKey = "q" | "w" | "e" | "r" | "p";
 
 export interface CDragonChampionSummary {
@@ -35,7 +33,7 @@ export interface CdragonChampion {
   chooseVoPath?: string;
   banVoPath?: string;
   roles: Role[];
-  recommendedItemDefaults?: any[];
+  recommendedItemDefaults?: any[]; // not managed
   skins: CdragonSkinSummary[];
   passive?: CdragonAbility;
   spells: CdragonSpell[];

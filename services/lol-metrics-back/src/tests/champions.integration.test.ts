@@ -4,13 +4,17 @@ import championsSupplementaryData from "@/data/champions.json";
 import { CDragonChampionSummary } from "@/types/cdragon";
 import { ChampionSupplementaryData } from "@/types/supplementaryDatas";
 
+// TODO: Need to exclude Ruby champ and other special champions
+const MAX_REGULAR_CHAMPION_ID = 1000;
+
 it("should validate all supplementary informations are not missing for each champion", async () => {
   const summaryUrl = `${process.env.COMMUNITY_DRAGON_API_URL}/v1/champion-summary.json`;
   const supplementaryDatas: ChampionSupplementaryData[] =
     championsSupplementaryData;
   const { data } = await axios.get<CDragonChampionSummary[]>(summaryUrl);
   const champions = data.filter(
-    (champ: CDragonChampionSummary) => champ.id !== -1
+    (champ: CDragonChampionSummary) =>
+      champ.id !== -1 && champ.id < MAX_REGULAR_CHAMPION_ID
   );
 
   const missing = [];

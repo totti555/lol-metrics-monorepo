@@ -6,17 +6,13 @@ import {
   CdragonSpell,
   SpellKey,
 } from "@/types/cdragon";
-import { components } from "@/types/openapi";
 import { toCDragonUrl, toCDragonUrlVideo } from "@/utils/cdragon";
 import axios from "axios";
 import { fetchSkins, findBaseSkinForChampion } from "@/services/skins.service";
 import championsSupplementaryData from "@/data/champions.json";
 import { ChampionSupplementaryData } from "@/types/supplementaryDatas";
-import { MAChampion } from "@/types/merakiAnalytics";
-
-type Champion = components["schemas"]["Champion"];
-type ChampionDetails = components["schemas"]["ChampionDetails"];
-type Spell = components["schemas"]["Spell"];
+import { MAChampion, MASkin } from "@/types/merakiAnalytics";
+import { Champion, ChampionDetails, Skin, Spell } from "@/types";
 
 export const getAllChampions = async (): Promise<Champion[]> => {
   const summaryUrl = `${process.env.COMMUNITY_DRAGON_API_URL}/v1/champion-summary.json`;
@@ -66,21 +62,19 @@ export const getChampionById = async (id: string): Promise<ChampionDetails> => {
   const skins = data.skins;
   const championDetailFromMA = await getChampionFromMA(data.alias);
 
-  const pricedSkins: components["schemas"]["Skin"][] = skins.map(
-    (skin: CdragonSkinSummary) => {
-      const matchingSkin = championDetailFromMA.skins.find(
-        (s: any) => s.id === skin.id
-      );
-      return {
-        id: skin.id,
-        name: skin.name,
-        isBase: skin.isBase,
-        image: toCDragonUrl(skin.uncenteredSplashPath),
-        rarity: skin.rarity ?? matchingSkin?.rarity ?? "Unknown",
-        price: matchingSkin?.cost ?? "Unknown",
-      };
-    }
-  );
+  const pricedSkins: Skin[] = skins.map((skin: CdragonSkinSummary) => {
+    const matchingSkin = championDetailFromMA.skins.find(
+      (s: MASkin) => s.id === skin.id
+    );
+    return {
+      id: skin.id,
+      name: skin.name,
+      isBase: skin.isBase,
+      image: toCDragonUrl(skin.uncenteredSplashPath),
+      rarity: skin.rarity ?? matchingSkin?.rarity ?? "Unknown",
+      price: matchingSkin?.cost ?? "Unknown",
+    };
+  });
 
   // SPELLS
   const spellsByKey = Object.fromEntries(
@@ -136,7 +130,9 @@ const spellByKey = (
   };
 };
 
-export const getChampionFromMA = async (champAlias: string) => {
+export const getChampionFromMA = async (
+  champAlias: string
+): Promise<MAChampion> => {
   const merakianalyticsUrl = `${process.env.MA_URL}/resources/latest/en-US/champions/${champAlias}.json`;
   const { data } = await axios.get<MAChampion>(merakianalyticsUrl);
   return data;
