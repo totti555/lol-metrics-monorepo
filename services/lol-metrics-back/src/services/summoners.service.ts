@@ -4,8 +4,8 @@ import {
   RateLimitError,
   UnauthorizedError,
 } from "@/errors/errors";
-import { Match, Summoner } from "@/types";
-import { MatchDto } from "@/types/riot";
+import { ChampionMastery, Match, Summoner } from "@/types";
+import { MatchDto, ChampionMasteryDto } from "@/types/riot";
 import {
   getAccountApiUrl,
   getPlatformApiUrl,
@@ -171,3 +171,32 @@ function simplifyLastMatch(matchDto: MatchDto, targetPuuid: string): Match {
     championIdsInMatch,
   };
 }
+
+export const getSummonerChampionMasteries = async (
+  puuid: string,
+  platformId: RiotPlatformId
+): Promise<ChampionMastery[]> => {
+  const platformUrl = getPlatformApiUrl(platformId);
+
+  const endpoint = `${platformUrl}/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`;
+
+  try {
+    const { data } = await axios.get<ChampionMasteryDto[]>(endpoint, {
+      headers: { "X-Riot-Token": process.env.RIOT_API_KEY! },
+    });
+    const filteredData: ChampionMastery[] =
+      data?.map((mastery: ChampionMasteryDto) => {
+        return {
+          id: mastery.championId,
+          level: mastery.championLevel,
+          points: mastery.championPoints,
+          pointsUntilNextLevel: mastery.championPointsUntilNextLevel,
+          pointsSinceLastLevel: mastery.championPointsSinceLastLevel,
+        };
+      }) ?? [];
+    return filteredData;
+  } catch (error) {
+    console.log("Error fetching champion masteries:", error);
+    return [];
+  }
+};

@@ -95,6 +95,54 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/summoner/{summonerId}/masteries": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get simplified champion masteries for a summoner */
+        get: {
+            parameters: {
+                query: {
+                    /**
+                     * @description Player platform ID
+                     * @example EUW1
+                     */
+                    platformId: string;
+                };
+                header?: never;
+                path: {
+                    /**
+                     * @description Encrypted Summoner ID
+                     * @example some-encrypted-summoner-id
+                     */
+                    summonerId: string;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Success - List of simplified champion masteries */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ChampionMastery"][];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -273,9 +321,38 @@ export interface components {
             profileIconId: number;
             /** @example 1700000000000 */
             revisionDate: number;
+            /** @example F-BQJYV0g7qcvVXa2yjgVP7l-uLUgJX3M9vMVz7WZO_-3w1kXfB6E9hT0uP2ZqMwAbc */
+            puuid?: string;
             /** @example 30 */
             summonerLevel: number;
             lastMatches?: components["schemas"]["Match"][];
+        };
+        ChampionMastery: {
+            /**
+             * @description Champion ID for this mastery entry
+             * @example 163
+             */
+            id: number;
+            /**
+             * @description Champion mastery level
+             * @example 13
+             */
+            level: number;
+            /**
+             * @description Total champion mastery points
+             * @example 117532
+             */
+            points: number;
+            /**
+             * @description Points earned since current level
+             * @example 8932
+             */
+            pointsSinceLastLevel: number;
+            /**
+             * @description Points needed to achieve next level
+             * @example 2068
+             */
+            pointsUntilNextLevel: number;
         };
         Match: {
             /**
@@ -302,14 +379,16 @@ export interface components {
                 /** @example true */
                 win: boolean;
                 role: string;
-                /** @example [
+                /**
+                 * @example [
                  *       1055,
                  *       3006,
                  *       3087,
                  *       3031,
                  *       3074,
                  *       3046
-                 *     ] */
+                 *     ]
+                 */
                 items: number[];
                 /**
                  * Format: float
@@ -317,7 +396,8 @@ export interface components {
                  */
                 killParticipation?: number;
             };
-            /** @example [
+            /**
+             * @example [
              *       103,
              *       45,
              *       240,
@@ -328,7 +408,8 @@ export interface components {
              *       33,
              *       55,
              *       120
-             *     ] */
+             *     ]
+             */
             championIdsInMatch: number[];
         };
     };

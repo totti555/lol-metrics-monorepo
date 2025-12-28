@@ -55,6 +55,34 @@ paths:
               schema:
                 $ref: "#/components/schemas/Summoner"
 
+  /summoner/{summonerId}/masteries:
+    get:
+      summary: Get simplified champion masteries for a summoner
+      parameters:
+        - in: path
+          name: summonerId
+          schema:
+            type: string
+          required: true
+          description: Encrypted Summoner ID
+          example: "some-encrypted-summoner-id"
+        - in: query
+          name: platformId
+          schema:
+            type: string
+          required: true
+          description: Player platform ID
+          example: "EUW1"
+      responses:
+        "200":
+          description: Success - List of simplified champion masteries
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ChampionMastery"
+
 components:
   schemas:
     Champion:
@@ -302,6 +330,9 @@ components:
         revisionDate:
           type: integer
           example: 1700000000000
+        puuid:
+          type: string
+          example: "F-BQJYV0g7qcvVXa2yjgVP7l-uLUgJX3M9vMVz7WZO_-3w1kXfB6E9hT0uP2ZqMwAbc"
         summonerLevel:
           type: integer
           example: 30
@@ -315,6 +346,36 @@ components:
         - profileIconId
         - revisionDate
         - summonerLevel
+
+    ChampionMastery:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Champion ID for this mastery entry
+          example: 163
+        level:
+          type: integer
+          description: Champion mastery level
+          example: 13
+        points:
+          type: integer
+          description: Total champion mastery points
+          example: 117532
+        pointsSinceLastLevel:
+          type: integer
+          description: Points earned since current level
+          example: 8932
+        pointsUntilNextLevel:
+          type: integer
+          description: Points needed to achieve next level
+          example: 2068
+      required:
+        - id
+        - level
+        - points
+        - pointsSinceLastLevel
+        - pointsUntilNextLevel
 
     Match:
       type: object

@@ -4,7 +4,10 @@ import {
   RateLimitError,
   UnauthorizedError,
 } from "@/errors/errors";
-import { riotIdToSummoner } from "@/services/summoners.service";
+import {
+  getSummonerChampionMasteries,
+  riotIdToSummoner,
+} from "@/services/summoners.service";
 import { RiotPlatformId } from "@/utils/riotRouting";
 import { Request, Response } from "express";
 
@@ -22,6 +25,31 @@ export const searchSummonerController = async (req: Request, res: Response) => {
     }
 
     const summoner = await riotIdToSummoner(name, tagLine, platformId);
+    res.status(200).json(summoner);
+  } catch (error: unknown) {
+    handleRiotErrors(error, res);
+  }
+};
+
+export const getSummonerChampionMasteriesController = async (
+  req: Request,
+  res: Response
+) => {
+  try {
+    const puuid = req.params.summonerId as string;
+    const platformId = req.query.platformId as RiotPlatformId;
+
+    if (!puuid) {
+      res.status(400).json({ message: "Missing summonerId param" });
+      return;
+    }
+
+    if (!platformId) {
+      res.status(400).json({ message: "Missing platformId query param" });
+      return;
+    }
+
+    const summoner = await getSummonerChampionMasteries(puuid, platformId);
     res.status(200).json(summoner);
   } catch (error: unknown) {
     handleRiotErrors(error, res);

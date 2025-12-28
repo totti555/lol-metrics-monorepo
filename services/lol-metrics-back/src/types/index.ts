@@ -7,3 +7,4 @@ export type Skin = components["schemas"]["Skin"];
 export type Match = components["schemas"]["Match"];
 export type Role = components["schemas"]["Role"];
 export type Summoner = components["schemas"]["Summoner"];
+export type ChampionMastery = components["schemas"]["ChampionMastery"];
