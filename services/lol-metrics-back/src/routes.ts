@@ -4,8 +4,10 @@ import {
   getChampionByIdController,
   getChampionsController,
 } from "./controllers/champions.controller";
-import { searchSummonerController } from "./controllers/summoner.controller";
-// IMPORT ROUTER
+import {
+  getSummonerChampionMasteriesController,
+  searchSummonerController,
+} from "./controllers/summoner.controller";
 
 const router = Router();
 
@@ -26,8 +28,11 @@ router.get("/champions/:id", getChampionByIdController);
 // Summoners list (with queryParam)
 router.get("/summoner", searchSummonerController);
 
-// Summoner (queryParam moreDetails -->  rank + mastery)
-// router.get('/summoners/:summonerName', searchSummonerByName )
+// Summoner champions mastery
+router.get(
+  "/summoner/:summonerId/masteries",
+  getSummonerChampionMasteriesController
+);
 
 // Last matches of a summoner
 // router.get('/summoners/:summonerId/matches')

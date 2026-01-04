@@ -1,3 +1,16 @@
+export interface AccountDto {
+  puuid: string;
+  gameName: string;
+  tagLine: string;
+}
+
+export interface SummonerDto {
+  profileIconId: number;
+  revisionDate: number;
+  puuid: string;
+  summonerLevel: number;
+}
+
 export interface MatchDto {
   metadata: MetadataDto;
   info: InfoDto;
@@ -382,4 +395,26 @@ export interface ObjectivesDto {
 export interface ObjectiveDto {
   first: boolean;
   kills: number;
+}
+
+export interface ChampionMasteryDto {
+  puuid: string;
+  championId: number;
+  championLevel: number;
+  championPoints: number;
+  lastPlayTime: number;
+  championPointsSinceLastLevel: number;
+  championPointsUntilNextLevel: number;
+  markRequiredForNextLevel: number;
+  tokensEarned: number;
+  championSeasonMilestone: number;
+  milestoneGrades: string[];
+  nextSeasonMilestone?: NextSeasonMilestonesDto;
+}
+
+export interface NextSeasonMilestonesDto {
+  requireGradeCounts: Record<string, number>; // e.g. { "S-": 1 }
+  rewardMarks: number;
+  bonus: boolean;
+  totalGamesRequires: number;
 }
