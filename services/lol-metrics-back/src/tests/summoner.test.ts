@@ -1,4 +1,4 @@
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 import {
   NotFoundError,
   UnauthorizedError,
@@ -9,7 +9,9 @@ import { RiotPlatformId } from "@/utils/riotRouting";
 import {
   getLastMatchesByPuuid,
   riotIdToSummoner,
+  getSummonerChampionMasteries,
 } from "@/services/summoners.service";
+import { ChampionMasteryDto } from "@/types/riot";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
@@ -164,5 +166,91 @@ describe("getLastMatchesByPuuid", () => {
     mockedAxios.get.mockRejectedValue(new Error("fail"));
     const result = await getLastMatchesByPuuid(puuid, platformId);
     expect(result).toEqual([]);
+  });
+});
+
+describe("getSummonerChampionMasteries", () => {
+  const platformId = "EUW1" as RiotPlatformId;
+  const puuid = "test-puuid";
+  const platformUrl = "https://platform.api";
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    process.env.RIOT_API_KEY = "test-key";
+    jest
+      .spyOn(require("@/utils/riotRouting"), "getPlatformApiUrl")
+      .mockReturnValue(platformUrl);
+  });
+
+  it("returns empty array when no masteries", async () => {
+    mockedAxios.get.mockResolvedValue({ data: [] });
+    const result = await getSummonerChampionMasteries(puuid, platformId);
+    expect(result).toEqual([]);
+  });
+
+  it("returns transformed champion masteries", async () => {
+    const mockMasteries: ChampionMasteryDto[] = [
+      {
+        championId: 157,
+        championLevel: 7,
+        championPoints: 250000,
+        championPointsUntilNextLevel: 0,
+        championPointsSinceLastLevel: 21600,
+      },
+      {
+        championId: 92,
+        championLevel: 5,
+        championPoints: 45000,
+        championPointsUntilNextLevel: 12000,
+        championPointsSinceLastLevel: 8000,
+      },
+    ] as ChampionMasteryDto[];
+
+    mockedAxios.get.mockResolvedValue({ data: mockMasteries });
+    const result = await getSummonerChampionMasteries(puuid, platformId);
+
+    expect(result).toEqual([
+      {
+        id: 157,
+        level: 7,
+        points: 250000,
+        pointsUntilNextLevel: 0,
+        pointsSinceLastLevel: 21600,
+      },
+      {
+        id: 92,
+        level: 5,
+        points: 45000,
+        pointsUntilNextLevel: 12000,
+        pointsSinceLastLevel: 8000,
+      },
+    ]);
+  });
+
+  it("calls correct endpoint with API key", async () => {
+    mockedAxios.get.mockResolvedValue({ data: [] });
+    await getSummonerChampionMasteries(puuid, platformId);
+
+    expect(mockedAxios.get).toHaveBeenCalledWith(
+      `${platformUrl}/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`,
+      {
+        headers: { "X-Riot-Token": "test-key" },
+      }
+    );
+  });
+
+  it("returns empty array on error", async () => {
+    const consoleLogSpy = jest.spyOn(console, "log").mockImplementation();
+    mockedAxios.get.mockRejectedValue(new Error("API error"));
+
+    const result = await getSummonerChampionMasteries(puuid, platformId);
+
+    expect(result).toEqual([]);
+    expect(consoleLogSpy).toHaveBeenCalledWith(
+      "Error fetching champion masteries:",
+      expect.any(Error)
+    );
+
+    consoleLogSpy.mockRestore();
   });
 });
