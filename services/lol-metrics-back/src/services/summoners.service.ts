@@ -5,7 +5,12 @@ import {
   UnauthorizedError,
 } from "@/errors/errors";
 import { ChampionMastery, Match, Summoner } from "@/types";
-import { MatchDto, ChampionMasteryDto } from "@/types/riot";
+import {
+  MatchDto,
+  ChampionMasteryDto,
+  AccountDto,
+  SummonerDto,
+} from "@/types/riot";
 import {
   getAccountApiUrl,
   getPlatformApiUrl,
@@ -15,7 +20,7 @@ import {
 import axios from "axios";
 
 export const riotIdToSummoner = async (
-  gameName: string,
+  summonerName: string,
   tagLine: string,
   platformId: RiotPlatformId
 ): Promise<Summoner> => {
@@ -27,8 +32,8 @@ export const riotIdToSummoner = async (
   }
 
   try {
-    const riotAccount = await axios.get(
-      `${accountUrl}/riot/account/v1/accounts/by-riot-id/${gameName}/${tagLine}`,
+    const { data } = await axios.get<AccountDto>(
+      `${accountUrl}/riot/account/v1/accounts/by-riot-id/${summonerName}/${tagLine}`,
       {
         headers: {
           "X-Riot-Token": process.env.RIOT_API_KEY!,
@@ -36,13 +41,12 @@ export const riotIdToSummoner = async (
       }
     );
 
-    if (!riotAccount.data) {
+    if (!data) {
       throw new NotFoundError("Riot account not found");
     }
 
-    const puuid = riotAccount.data.puuid;
-
-    const summonerData = await axios.get(
+    const puuid = data.puuid;
+    const { data: summonerData } = await axios.get<SummonerDto>(
       `${platformUrl}/lol/summoner/v4/summoners/by-puuid/${puuid}`,
       {
         headers: {
@@ -51,14 +55,16 @@ export const riotIdToSummoner = async (
       }
     );
 
-    if (!summonerData.data) {
+    if (!summonerData) {
       throw new NotFoundError("Summoner data not found");
     }
 
     const lastMatches = await getLastMatchesByPuuid(puuid, platformId);
 
     return {
-      ...summonerData.data,
+      ...summonerData,
+      name: summonerName,
+      tagLine,
       lastMatches,
     };
   } catch (error: unknown) {
@@ -90,7 +96,7 @@ export const getLastMatchesByPuuid = async (
   const accountUrl = getAccountApiUrl(platformId);
 
   try {
-    const matchesResponse = await axios.get(
+    const matchesResponse = await axios.get<string[]>(
       `${accountUrl}/lol/match/v5/matches/by-puuid/${puuid}/ids`,
       {
         headers: { "X-Riot-Token": process.env.RIOT_API_KEY! },

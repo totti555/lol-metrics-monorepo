@@ -66,7 +66,6 @@ const handleRiotErrors = (error: unknown, res: Response) => {
   } else if (error instanceof RateLimitError) {
     res.status(429).json({ message: error.message });
   } else {
-    console.error(error);
     res.status(500).json({ message: "Internal server error" });
   }
 };

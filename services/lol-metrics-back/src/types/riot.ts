@@ -1,3 +1,16 @@
+export interface AccountDto {
+  puuid: string;
+  gameName: string;
+  tagLine: string;
+}
+
+export interface SummonerDto {
+  profileIconId: number;
+  revisionDate: number;
+  puuid: string;
+  summonerLevel: number;
+}
+
 export interface MatchDto {
   metadata: MetadataDto;
   info: InfoDto;
