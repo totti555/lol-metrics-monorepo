@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "24"
+          node-version: "26"
           cache: "yarn"
 
       - name: Cache Yarn
@@ -48,7 +48,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "24"
+          node-version: "26"
           cache: "yarn"
 
       - name: Restore Yarn cache
@@ -76,7 +76,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
-          node-version: "24"
+          node-version: "26"
 
       - name: Audit backend dependencies
         run: yarn workspace lol-metrics-back audit --level high
@@ -95,7 +95,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "24"
+          node-version: "26"
           cache: "yarn"
 
       - name: Restore Yarn cache
